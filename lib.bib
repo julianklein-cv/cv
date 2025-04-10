@@ -1,46 +1,53 @@
 @inproceedings{loc,
-author = {Klein, Julian and Kogel, Paul and Glesner, Sabine},
-title = {Verifying Opacity of Discrete-Timed Automata},
-year = {2024},
-isbn = {9798400705892},
-publisher = {Association for Computing Machinery},
-address = {New York, NY, USA},
-url = {https://doi.org/10.1145/3644033.3644376},
-doi = {10.1145/3644033.3644376},
-booktitle = {Proceedings of the 2024 IEEE/ACM 12th International Conference on Formal Methods in Software Engineering (FormaliSE)},
-pages = {55–65},
-numpages = {11},
-keywords = {opacity, verification, timed automata, tick automata},
-location = {Lisbon, Portugal},
-series = {FormaliSE '24}
-}
-
-@InProceedings{te,
-author="Klein, Julian
-and Kogel, Paul
-and Glesner, Sabine",
-editor="Ogata, Kazuhiro
-and Mery, Dominique
-and Sun, Meng
-and Liu, Shaoying",
-title="Efficient State Estimation of Discrete-Timed Automata",
-booktitle="Formal Methods and Software Engineering",
-year="2024",
-publisher="Springer Nature Singapore",
-address="Singapore",
-pages="85--105",
-abstract="State estimation is a fundamental method in control theory that has applications in privacy, fault diagnosis, and the verification of other state inference properties. State estimation methods for timed automata rely on discretizing time into atomic steps. These discrete time steps are enumerated in separate states, significantly limiting scalability for large, realistic systems. In this paper, we propose a more efficient state estimation method for discrete-timed automata. The key idea of our approach is to avoid the enumeration of single time steps when possible. We provide a formal definition of a new state estimator model and an efficient algorithmic approach to derive it from discrete-timed automata. We validate our method on 11 realistic case studies and show a significant decrease in computational costs.",
-isbn="978-981-96-0617-7"
-}
-
-@INPROCEEDINGS{gpt,
-  author={Michelutti, Chiara and Eckert, Jens and Monecke, Milko and Klein, Julian and Glesner, Sabine},
-  booktitle={2024 2nd International Conference on Foundation and Large Language Models (FLLM)}, 
-  title={A Systematic Study on the Potentials and Limitations of LLM-assisted Software Development}, 
+  author={Klein, Julian and Kogel, Paul and Glesner, Sabine},
+  title={Verifying Opacity of Discrete-Timed Automata},
   year={2024},
-  volume={},
-  number={},
+  publisher={Association for Computing Machinery},
+  doi={10.1145/3644033.3644376},
+  isbn={9798400705892},
+  booktitle={Proceedings of the 2024 IEEE/ACM 12th International Conference on Formal Methods in Software Engineering (FormaliSE)},
+  pages={55–65},
+  keywords={Opacity, Verification, Timed Automata, Tick Automata},
+  location={Lisbon, Portugal},
+  series={FormaliSE '24},
+  abstract=
+  {
+      Opacity is a powerful confidentiality property that holds if a system cannot leak secret information through observable behavior. In recent years, time has become an increasingly popular attack vector. The notion of opacity has therefore been extended to timed automata (TA). However, the verification of opacity of TA has been proven to be undecidable for the commonly used dense time model. To make the problem decidable, state of the art approaches consider weaker notions of opacity or heavily restrict the class of considered TA, resulting in unrealistic threat models. In this paper, we address the problem of verifying opacity of TA without restrictions. For this purpose, we consider a discrete time setting. We present a novel algorithm to transform TA to equivalent finite automata (FA) and then use known methods to verify opacity of the resulting FA. To improve the efficiency of our algorithm, we use a novel time abstraction that significantly reduces the state space of the resulting FA, improving the scalability of our approach. We validate our method using randomized systems, as well as four case studies from the literature showing that our approach is applicable in practice.
+  }
+}
+
+@inproceedings{te,
+  author={Klein, Julian and Kogel, Paul and Glesner, Sabine},
+  title={Efficient State Estimation of Discrete-Timed Automata},
+  year={2024},
+  publisher={Springer Nature Singapore},
+  doi={doi.org/10.1007/978-981-96-0617-7_6},
+  isbn={978-981-96-0617-7},
+  booktitle={Proceedings of the 2024 25th International Conference on Formal Engineering Methods (ICFEM)},
+  pages={85--105},
+  keywords={State estimation, Observers, Timed Automata},
+  location={Hiroshima, Japan},
+  series={ICFEM '24},
+  abstract=
+  {
+    State estimation is a fundamental method in control theory that has applications in privacy, fault diagnosis, and the verification of other state inference properties. State estimation methods for timed automata rely on discretizing time into atomic steps. These discrete time steps are enumerated in separate states, significantly limiting scalability for large, realistic systems. In this paper, we propose a more efficient state estimation method for discrete-timed automata. The key idea of our approach is to avoid the enumeration of single time steps when possible. We provide a formal definition of a new state estimator model and an efficient algorithmic approach to derive it from discrete-timed automata. We validate our method on 11 realistic case studies and show a significant decrease in computational costs.
+  }
+}
+
+@inproceedings{gpt,
+  author={Michelutti, Chiara and Eckert, Jens and Monecke, Milko and Klein, Julian and Glesner, Sabine},
+  title={A Systematic Study on the Potentials and Limitations of LLM-assisted Software Development},
+  year={2024},
+  publisher={IEEE},
+  doi={10.1109/FLLM63129.2024.10852455},
+  isbn={979-8-3503-5479-9},
+  booktitle={Proceedings of the 2024 2nd International Conference on Foundation and Large Language Models (FLLM)},
   pages={330-338},
-  keywords={Computer languages;Java;Sequential analysis;Codes;Systematics;Large language models;Chatbots;Testing;Software engineering;Software development management;Large Language Models;Software Development;ChatGPT;Code Generation;Haskell;Java;Functional Programming;Object Oriented Programming;Prompt Engineering},
-  doi={10.1109/FLLM63129.2024.10852455}
+  keywords={Large Language Models, Software Development, ChatGPT, Code Generation, Haskell, Java, Functional Programming, Object Oriented Programming, Prompt Engineering},
+  location={Dubai, United Arab Emirates},
+  series={FLLM '24},
+  abstract=
+  {
+    In the field of software engineering, Large Language Models like GPT have gained enormous interest in recent times. With its expanding area of application, ChatGPT has become an essential tool for code generation. Several studies have shown that the quality of generated code depends on the underlying dataset and the quality of the provided prompts. However, its precise capabilities and limitations remain uncertain, as does the extent of assistance required for effective code generation. We present the results of our systematic study in which we investigate the potential of ChatGPT, based on GPT-4, in solving assignments of an introductory-level programming class. We examine the impact of programming language choice, different prompting strategies, and the results of the model compared to those of real students. Our results show that ChatGPT cannot solve the assignments independently, but outperforms the average student with human assistance.
+  }
 }
