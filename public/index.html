@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CV-Julian Klein</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f2f5;
+      display: flex;
+    }
+
+    .sidebar {
+      width: 300px;
+      background-color: #2e2e2d;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .white-link {
+      color: white;
+    }
+
+    .white-link:hover {
+      color: lightgray;
+    }
+
+    .blue-link {
+      color: #6e6e6e;
+    }
+
+    .blue-link:hover {
+      color: darkgray;
+    }
+
+    .sidebarimage {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 1rem;
+    }
+
+    .sidebar h2 {
+      margin: 0.5rem 0 0.2rem;
+    }
+
+    .sidebar p {
+      font-size: 0.9rem;
+      text-align: left;
+      color: #ccc;
+    }
+
+    .main {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .icon {
+      width: 30px;
+      height: 30px;
+      vertical-align: middle;
+      margin-right: 15px;
+    }
+
+    .small-icon {
+      width: 23px;
+      height: 23px;
+      vertical-align: middle;
+      margin-right: 4px;
+    }
+
+    .small-text {
+      font-size: 20px;
+      font-weight: normal;
+    }
+
+    header {
+      background-color: #242424;
+      color: white;
+      padding: 1rem 2rem;
+    }
+
+    nav {
+      display: flex;
+      background-color: #3b3b3b;
+      padding: 0.5rem 2rem;
+      gap: 1rem;
+    }
+
+    nav button {
+      background: none;
+      border: none;
+      color: white;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    nav button.active,
+    nav button:hover {
+      background-color: #1f1f1f;
+    }
+
+    .container {
+      padding: 2rem;
+    }
+
+    .tab-content {
+      display: none;
+      animation: fadeIn 0.3s ease-in;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    h2 {
+      border-bottom: 2px solid #787878;
+      padding-bottom: 0.3rem;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+      }
+      .sidebar {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+      }
+      .sidebar img {
+        margin-right: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <img src="image.jpg" alt="Picture" class="sidebarimage">
+    <h2>Contact</h2>
+    <p>
+      <img src="location.svg" alt="Icon" class="icon">
+      <span>Berlin, Germany</span>
+    </p>
+    <p>
+      <a href="https://www.tu.berlin/sese/ueber-uns/wms/julian-klein" class="white-link">
+        <img src="university.svg" alt="Icon" class="icon">
+        <span>Institution: <b>TU Berlin</b></span>
+      </a>
+    </p>
+    <p>
+      <a href="https://orcid.org/my-orcid?orcid=0009-0005-2899-3934" class="white-link">
+        <img src="orcid.svg" alt="Icon" class="icon">
+        <span>0009-0005-2899-3934</span>
+      </a>
+    </p>
+    <p>
+      <img src="mail.svg" alt="Icon" class="icon">
+      <span>j.klein@tu-berlin.de</span>
+    </p>
+    <p>
+      <img src="gmail.svg" alt="Icon" class="icon">
+      <span>jbh.klein@gmail.com</span>
+    </p>
+    <p>
+      <a href="https://scholar.google.com/citations?user=Uv28q84AAAAJ&hl=de&oi=sra" class="white-link">
+        <img src="scholar.svg" alt="Icon" class="icon">
+        <span>Google Scholar</span>
+      </a>
+    </p>
+    <p>
+      <a href="https://www.researchgate.net/profile/Julian-Klein-11" class="white-link">
+        <img src="researchgate.svg" alt="Icon" class="icon">
+        <span>ResearchGate</span>
+      </a>
+    </p>
+    <p>
+      <a href="https://gitlab.com/julianklein/" class="white-link">
+        <img src="gitlab.svg" alt="Icon" class="icon">
+        <span>Gitlab</span>
+      </a>
+    </p>
+  </div>
+
+  <div class="main">
+    <header>
+      <h1>Julian Klein</h1>
+    </header>
+
+    <nav>
+      <button class="tab-button active" data-tab="cv">Curriculum Vitae</button>
+      <button class="tab-button" data-tab="publications">Publications</button>
+      <button class="tab-button" data-tab="visits">Workshops and Visits</button>
+    </nav>
+
+    <div class="container">
+      <div id="cv" class="tab-content active">
+        <h1>Curriculum Vitae</h1>
+        <p>I am a PhD student at TU Berlin. The focus of my research is to guarantee confidentiality properties in time-sensitive systems. Besides my work as a researcher, I am also a teaching assistant. This includes supervision of theses, project work with small groups of students, and a large undergraduate courses with over 700 students.</p>
+
+        <h2>Education</h2>
+
+        <h3>PhD Student<span class="small-text"> (since August 2023)</span></h3>
+        <p><b>Topic:</b> Formal Verification and Enforcement of Confidentiality Properties in Time-Sensitive Systems.</p>
+        <p><b>Supervisor:</b> Prof. Dr. Sabine Glesner</p>
+
+        <h3>Master of Science<span class="small-text"> (2023)</span></h3>
+        <p><b>Thesis:</b> Verifying and Enforcing Opacity of Timed Automata</p>
+        <p><b>Examiners:</b> Prof. Dr. Sabine Glesner, Prof. Dr. Stephan Kreutzer</p>
+
+        <h3>Bachelor of Science<span class="small-text"> (2020)</span></h3>
+        <p><b>Thesis:</b> Improving Confidentiality Enforcement through Symbolic Information Flow Analysis</p>
+        <p><b>Examiners:</b> Prof. Dr. Sabine Glesner, Prof. Dr. Florian Tschorsch</p>
+
+      <h2>Teaching</h2>
+      <ul>
+          <li>Teaching assistant (since August 2023)</li>
+          <li>Tutor (2019-2023)</li>
+      </ul>
+      <h3>Responsibilities</h3>
+      <ul>
+          <li>Lectures</li>
+          <li>Online and offline tutorial</li>
+          <li>Consultation hours</li>
+          <li>Exercise design for homeworks and exams</li>
+          <li>Class organization</li>
+          <li>Grading</li>
+      </ul>
+      <h3>Taught classes</h3>
+      <ul>
+          <li>Software Engineering and Programming Paradigms (Lecture)</li>
+          <li>Software Engineering of Embedded/Cyber-Physical Systems (Lecture)</li>
+          <li>Digital Systems (Lecture)</li>
+          <li>Cyber-Physical Systems (Project)</li>
+          <li>Software and Embedded Systems Engineering (Seminar)</li>
+      </ul>
+      </div>
+
+
+      <div id="publications" class="tab-content">
+        <h1>Publications</h1>
+
+        <h2>Publications as first author</h2>
+
+        <h3>Efficient State Estimation of Discrete-Timed Automata</h3>
+        <p>
+            25th International Conference on Formal Engineering Methods (ICFEM)<br>
+            <img src="springer_b.svg" class="small-icon">
+            <span>Springer - November 2024</span><br>
+            Authors: Julian Klein, Paul Kogel, Sabine Glesner<br>
+            <a href="https://doi.org/10.1007/978-981-96-0617-7_6" class="blue-link">
+              <img src="paper_b.svg" class="small-icon">
+              <span>https://doi.org/10.1007/978-981-96-0617-7_6</span>
+            </a>
+            <br>
+            <b>Artifact: Software Prototype</b><br>
+            No artifact evaluation.<br>
+            <a href="https://gitlab.com/julianklein/threshold-estimation" class="blue-link">
+              <img src="gitlab_b.svg" class="small-icon">
+              <span>https://gitlab.com/julianklein/threshold-estimation</span>
+            </a>
+        </p>
+
+        <h3>Verifying Opacity of Discrete-Timed Automata</h3>
+        <p>
+            12th International Conference on Formal Methods in Software Engineering (FormaliSE<br>
+            <img src="acm_b.svg" class="small-icon">
+            <img src="ieee_b.svg" class="small-icon">
+            <span>ACM/IEEE - June 2024</span><br>
+            Authors: Julian Klein, Paul Kogel, Sabine Glesner<br>
+            <a href="https://doi.org/10.1145/3644033.3644376" class="blue-link">
+              <img src="paper_b.svg" class="small-icon">
+              <span>https://doi.org/10.1145/3644033.3644376</span>
+            </a>
+            <br>
+            <b>Artifact: Software Prototype</b><br>
+            <span>Peer reviewed: </span>
+            <img src="available.svg" class="small-icon">
+            <img src="functional.svg" class="small-icon">
+            <br>
+            <a href="https://doi.org/10.6084/m9.figshare.24790842.v4" class="blue-link">
+              <img src="figshare_b.svg" class="small-icon">
+              <span>https://doi.org/10.6084/m9.figshare.24790842.v4</span>
+            </a>
+            <br>
+            <a href="https://gitlab.com/julianklein/opacity-verification-of-discrete-timed-automata" class="blue-link">
+              <img src="gitlab_b.svg" class="small-icon">
+              <span>https://gitlab.com/julianklein/opacity-verification-of-discrete-timed-automata</span>
+            </a>
+        </p>
+
+        <h2>Publications as co-author</h2>
+
+        <h3>A Systematic Study on the Potentials and Limitations of LLM-assisted Software Development</h3>
+        <p>
+            2nd International Conference on Foundation and Large Language Models (FLLM)<br>
+            <img src="ieee_b.svg" class="small-icon">
+            <span>IEEE - November 2024</span><br>
+            Authors: Chiara Michelutti, Jens Eckert, Milko Monecke, Julian Klein and Sabine Glesner<br>
+            <a href="https://doi.org/10.1109/FLLM63129.2024.10852455" class="blue-link">
+              <img src="paper_b.svg" class="small-icon">
+              <span>https://doi.org/10.1109/FLLM63129.2024.10852455</span>
+            </a>
+        </p>
+
+      </div>
+
+      <div id="visits" class="tab-content">
+        <h2>Workshops and Visits</h2>
+        
+        <h3>Workshop at Schloss Dagstuhl</h3>
+        <p>
+            Workshop in research methods in software engineering training.<br>
+            <img src="location_b.svg" class="small-icon">
+            <span>Dagstuhl, Germany - October 2024</span><br>
+        </p>
+
+        <h3>Visit at University of Cagliari</h3>
+        <p>
+            Guest presentation and scientific collaboration.<br>
+            <img src="location_b.svg" class="small-icon">
+            <span>Cagliary, Italy - September 2024</span><br>
+        </p>
+
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    const buttons = document.querySelectorAll('.tab-button');
+    const contents = document.querySelectorAll('.tab-content');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        buttons.forEach(btn => btn.classList.remove('active'));
+        contents.forEach(content => content.classList.remove('active'));
+
+        button.classList.add('active');
+        document.getElementById(button.dataset.tab).classList.add('active');
+      });
+    });
+  </script>
+
+</body>
+</html>
