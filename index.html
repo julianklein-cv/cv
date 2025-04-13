@@ -1,309 +1,423 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>CV-Julian Klein</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Julian Klein-CV</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f0f2f5;
-      display: flex;
-    }
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: row;
+            min-height: 100vh;
+        }
 
-    .sidebar {
-      width: 300px;
-      background-color: #2e2e2d;
-      color: white;
-      padding: 2rem 1rem;
-      text-align: center;
-      flex-shrink: 0;
-    }
+        .side-panel {
+            width: 350px;
+            background-color: rgb(54, 54, 54);
+            color: rgb(238, 238, 238);
+            padding: 2rem 1rem;
+            text-align: center;
+            flex-shrink: 0;
+        }
 
-    a {
-      text-decoration: none;
-    }
+        h1 {
+            border-bottom: 3px solid rgb(120, 120, 120);
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: rgb(120, 120, 120);
+        }
 
-    .white-link {
-      color: white;
-    }
+        .side-panel h2 {
+            border-bottom: 3px solid rgb(120, 120, 120);
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: rgb(238, 238, 238);
+        }
 
-    .white-link:hover {
-      color: lightgray;
-    }
+        h2 {
+            border-bottom: 2px solid rgb(120, 120, 120);
+            padding-top: 1rem;
+            padding-bottom: 0.3rem;
+            margin-bottom: 1rem;
+            color: rgb(120, 120, 120);
+        }
 
-    .blue-link {
-      color: #6e6e6e;
-    }
+        h3 {
+            padding-top: 0.8rem;
+            padding-bottom: 0.2rem;
+            margin-bottom: 0.2rem;
+            color: rgb(120, 120, 120);
+        }
 
-    .blue-link:hover {
-      color: darkgray;
-    }
+        ul {
+            padding-left: 1.5rem;
+        }
 
-    .sidebarimage {
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
-        object-fit: cover;
-        margin-bottom: 1rem;
-    }
+        /* Main content wrapper */
+        .main {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            color: rgb(114, 114, 114);
+            font-size: large;
+        }
 
-    .sidebar h2 {
-      margin: 0.5rem 0 0.2rem;
-    }
+        /* Top nav */
+        .top-nav {
+            background-color: rgb(30, 30, 30);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 40px;
+            flex-wrap: wrap;
+        }
 
-    .sidebar p {
-      font-size: 0.9rem;
-      text-align: left;
-      color: #ccc;
-    }
+        .nav-button {
+            position: relative;
+            background: none;
+            border: none;
+            color: rgb(238, 238, 238);
+            margin: 10px 25px;
+            font-size: clamp(18px, 2.5vw, 24px);
+            cursor: pointer;
+            padding: 12px 20px;
+            overflow: hidden;
+            white-space: nowrap;
+        }
 
-    .main {
-      flex-grow: 1;
-      display: flex;
-      flex-direction: column;
-    }
+        .nav-button:hover {
+            color: white;
+        }
 
-    .icon {
-      width: 30px;
-      height: 30px;
-      vertical-align: middle;
-      margin-right: 15px;
-    }
+        .nav-button::after,
+        .nav-button span::before,
+        .nav-button span::after {
+            content: '';
+            position: absolute;
+            background: white;
+            transition: all 0.1s ease;
+        }
 
-    .small-icon {
-      width: 23px;
-      height: 23px;
-      vertical-align: middle;
-      margin-right: 4px;
-    }
+        .nav-button::after {
+            height: 2px;
+            width: 0%;
+            left: 0%;
+        }
 
-    .small-text {
-      font-size: 20px;
-      font-weight: normal;
-    }
+        .nav-button::before {
+            top: 0;
+        }
 
-    header {
-      background-color: #242424;
-      color: white;
-      padding: 1rem 2rem;
-    }
+        .nav-button::after {
+            bottom: 0;
+        }
 
-    nav {
-      display: flex;
-      background-color: #3b3b3b;
-      padding: 0.5rem 2rem;
-      gap: 1rem;
-    }
+        .nav-button:hover::before,
+        .nav-button:hover::after {
+            width: 100%;
+        }
 
-    nav button {
-      background: none;
-      border: none;
-      color: white;
-      padding: 0.5rem 1rem;
-      font-size: 1rem;
-      border-radius: 10px;
-      cursor: pointer;
-    }
+        .content {
+            padding: 30px;
+        }
 
-    nav button.active,
-    nav button:hover {
-      background-color: #1f1f1f;
-    }
 
-    .container {
-      padding: 2rem;
-    }
+        a {
+            text-decoration: none;
+        }
 
-    .tab-content {
-      display: none;
-      animation: fadeIn 0.3s ease-in;
-    }
+        .white-link {
+            color: rgb(238, 238, 238);
+        }
 
-    .tab-content.active {
-      display: block;
-    }
+        .white-link:hover {
+            color: white
+        }
 
-    h2 {
-      border-bottom: 2px solid #787878;
-      padding-bottom: 0.3rem;
-      margin-bottom: 1rem;
-    }
+        .text-link {
+            color: rgb(109, 199, 255);
+        }
 
-    ul {
-      padding-left: 1.5rem;
-    }
+        .text-link:hover {
+            color: rgb(0, 157, 255);
+        }
 
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
+        .sidebarimage {
+            width: 230px;
+            height: 230px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+        }
 
-    @media (max-width: 768px) {
-      body {
-        flex-direction: column;
-      }
-      .sidebar {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 1rem;
-      }
-      .sidebar img {
-        margin-right: 1rem;
-      }
-    }
-  </style>
+        .side-panel h2 {
+            margin: 0.5rem 0 0.6rem;
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        .side-panel p {
+            margin: 0.5rem 0 0.5rem;
+            font-size: 1rem;
+            text-align: left;
+            color: rgb(238, 238, 238);
+        }
+
+        .main {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .icon {
+            width: 30px;
+            height: 30px;
+            vertical-align: middle;
+            margin-right: 15px;
+        }
+
+        .small-icon {
+            width: 23px;
+            height: 23px;
+            vertical-align: middle;
+            margin-right: 4px;
+        }
+
+        .small-text {
+            font-size: 20px;
+            font-weight: normal;
+        }
+
+
+        .sidebar-link {
+            position: relative;
+            color: rgb(238, 238, 238);
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            transition: color 0.15s ease;
+        }
+
+        .sidebar-link::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 0%;
+            height: 2px;
+            background-color: white;
+            transition: width 0.15s ease;
+        }
+
+        .sidebar-link:hover::after {
+            width: 100%;
+        }
+
+        .tab-content {
+            opacity: 0;
+            transition: opacity 0.2s ease, transform 0.2s ease;
+            pointer-events: none;
+            position: absolute;
+            width: 98%;
+            top: 15px;
+            left: 1%;
+        }
+
+        .tab-content.active {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+            position: relative;
+        }
+    </style>
 </head>
+
 <body>
-  <div class="sidebar">
-    <img src="image.jpg" alt="Picture" class="sidebarimage">
-    <h2>Contact</h2>
-    <p>
-      <img src="location.svg" alt="Icon" class="icon">
-      <span>Berlin, Germany</span>
-    </p>
-    <p>
-      <a href="https://www.tu.berlin/sese/ueber-uns/wms/julian-klein" class="white-link">
-        <img src="university.svg" alt="Icon" class="icon">
-        <span>Institution: <b>TU Berlin</b></span>
-      </a>
-    </p>
-    <p>
-      <a href="https://orcid.org/my-orcid?orcid=0009-0005-2899-3934" class="white-link">
-        <img src="orcid.svg" alt="Icon" class="icon">
-        <span>0009-0005-2899-3934</span>
-      </a>
-    </p>
-    <p>
-      <img src="mail.svg" alt="Icon" class="icon">
-      <span>j.klein@tu-berlin.de</span>
-    </p>
-    <p>
-      <img src="gmail.svg" alt="Icon" class="icon">
-      <span>jbh.klein@gmail.com</span>
-    </p>
-    <p>
-      <a href="https://scholar.google.com/citations?user=Uv28q84AAAAJ&hl=de&oi=sra" class="white-link">
-        <img src="scholar.svg" alt="Icon" class="icon">
-        <span>Google Scholar</span>
-      </a>
-    </p>
-    <p>
-      <a href="https://www.researchgate.net/profile/Julian-Klein-11" class="white-link">
-        <img src="researchgate.svg" alt="Icon" class="icon">
-        <span>ResearchGate</span>
-      </a>
-    </p>
-    <p>
-      <a href="https://gitlab.com/julianklein/" class="white-link">
-        <img src="gitlab.svg" alt="Icon" class="icon">
-        <span>Gitlab</span>
-      </a>
-    </p>
-  </div>
-
-  <div class="main">
-    <header>
-      <h1>Julian Klein</h1>
-    </header>
-
-    <nav>
-      <button class="tab-button active" data-tab="cv">Curriculum Vitae</button>
-      <button class="tab-button" data-tab="publications">Publications</button>
-      <button class="tab-button" data-tab="visits">Workshops and Visits</button>
-    </nav>
-
-    <div class="container">
-      <div id="cv" class="tab-content active">
-        <h1>Curriculum Vitae</h1>
-        <p>I am a PhD student at TU Berlin. The focus of my research is to guarantee confidentiality properties in time-sensitive systems. Besides my work as a researcher, I am also a teaching assistant. This includes supervision of theses, project work with small groups of students, and a large undergraduate courses with over 700 students.</p>
-
-        <h2>Education</h2>
-
-        <h3>PhD Student<span class="small-text"> (since August 2023)</span></h3>
-        <p><b>Topic:</b> Formal Verification and Enforcement of Confidentiality Properties in Time-Sensitive Systems.</p>
-        <p><b>Supervisor:</b> Prof. Dr. Sabine Glesner</p>
-
-        <h3>Master of Science<span class="small-text"> (2023)</span></h3>
-        <p><b>Thesis:</b> Verifying and Enforcing Opacity of Timed Automata</p>
-        <p><b>Examiners:</b> Prof. Dr. Sabine Glesner, Prof. Dr. Stephan Kreutzer</p>
-
-        <h3>Bachelor of Science<span class="small-text"> (2020)</span></h3>
-        <p><b>Thesis:</b> Improving Confidentiality Enforcement through Symbolic Information Flow Analysis</p>
-        <p><b>Examiners:</b> Prof. Dr. Sabine Glesner, Prof. Dr. Florian Tschorsch</p>
-
-      <h2>Teaching Experience</h2>
-      <ul>
-          <li>Teaching assistant (since August 2023)</li>
-          <li>Tutor (2019-2023)</li>
-      </ul>
-      <h3>Responsibilities</h3>
-      <ul>
-          <li>Lectures</li>
-          <li>Online and offline tutorial</li>
-          <li>Consultation hours</li>
-          <li>Exercise design for homeworks and exams</li>
-          <li>Class organization</li>
-          <li>Grading</li>
-      </ul>
-      <h3>Taught classes</h3>
-      <ul>
-          <li>Software Engineering and Programming Paradigms (Lecture)</li>
-          <li>Software Engineering of Embedded/Cyber-Physical Systems (Lecture)</li>
-          <li>Digital Systems (Lecture)</li>
-          <li>Cyber-Physical Systems (Project)</li>
-          <li>Software and Embedded Systems Engineering (Seminar)</li>
-      </ul>
-      </div>
-
-
-      <div id="publications" class="tab-content">
-        <h1>Publications</h1>
-        <script src="https://bibbase.org/show?bib=https://julianklein-cv.github.io/cv/lib.bib&jsonp=1"></script>
-      </div>
-
-      <div id="visits" class="tab-content">
-        <h2>Workshops and Visits</h2>
-        
-        <h3>Workshop at Schloss Dagstuhl</h3>
+    <div class="side-panel">
+        <img src="image.jpg" alt="Picture" class="sidebarimage">
+        <h2>Julian Klein</h2>
         <p>
-            Workshop in research methods in software engineering training.<br>
-            <img src="location_b.svg" class="small-icon">
-            <span>Dagstuhl, Germany - October 2024</span><br>
+            <img src="location.svg" alt="Icon" class="icon">
+            <span>Berlin, Germany</span>
         </p>
-
-        <h3>Visit at University of Cagliari</h3>
         <p>
-            Guest presentation and scientific collaboration.<br>
-            <img src="location_b.svg" class="small-icon">
-            <span>Cagliary, Italy - September 2024</span><br>
+            <img src="mail.svg" alt="Icon" class="icon">
+            <span>Mail: j.klein@tu-berlin.de</span>
         </p>
-
-      </div>
-
+        <p>
+            <img src="gmail.svg" alt="Icon" class="icon">
+            <span>GMail: jbh.klein@gmail.com</span>
+        </p>
+        <p>
+            <a href="https://www.tu.berlin/en" class="sidebar-link">
+                <img src="university.svg" alt="Icon" class="icon">
+                <span>Institution: <b>TU Berlin</b></span>
+            </a>
+        </p>
+        <p>
+            <a href="https://orcid.org/my-orcid?orcid=0009-0005-2899-3934" class="sidebar-link">
+                <img src="orcid.svg" alt="Icon" class="icon">
+                <span>ORCID: 0009-0005-2899-3934</span>
+            </a>
+        </p>
+        <p>
+            <a href="https://scholar.google.com/citations?user=Uv28q84AAAAJ&hl=de&oi=sra" class="sidebar-link">
+                <img src="scholar.svg" alt="Icon" class="icon">
+                <span>Google Scholar</span>
+            </a>
+        </p>
+        <p>
+            <a href="https://www.researchgate.net/profile/Julian-Klein-11" class="sidebar-link">
+                <img src="researchgate.svg" alt="Icon" class="icon">
+                <span>ResearchGate</span>
+            </a>
+        </p>
+        <p>
+            <a href="https://gitlab.com/julianklein/" class="sidebar-link">
+                <img src="gitlab.svg" alt="Icon" class="icon">
+                <span>Gitlab</span>
+            </a>
+        </p>
+        <p>
+            <a href="https://dblp.org/pid/03/9150-1.html" class="sidebar-link">
+                <img src="dblp.svg" alt="Icon" class="icon">
+                <span>dblp</span>
+            </a>
+        </p>
     </div>
-  </div>
 
-  <script>
-    const buttons = document.querySelectorAll('.tab-button');
-    const contents = document.querySelectorAll('.tab-content');
+    <div class="main">
 
-    buttons.forEach(button => {
-      button.addEventListener('click', () => {
-        buttons.forEach(btn => btn.classList.remove('active'));
-        contents.forEach(content => content.classList.remove('active'));
+        <div class="top-nav">
+            <button class="nav-button" onclick="showTab('cv')"><span>Curriculum Vitae</span></button>
+            <button class="nav-button" onclick="showTab('publications')"><span>Publications</span></button>
+            <button class="nav-button" onclick="showTab('visits')"><span>Workshops and Visits</span></button>
+        </div>
 
-        button.classList.add('active');
-        document.getElementById(button.dataset.tab).classList.add('active');
-      });
-    });
-  </script>
+        <div class="container" style="position: relative; min-height: 300px;">
+            <div id="cv" class="tab-content active">
+                <h1>Curriculum Vitae</h1>
+
+                <p>
+                    I am a PhD student at the 
+                    <a href="https://www.tu.berlin/sese" class="text-link">
+                        <span>software and embedded systems engineering (SESE) group</span>
+                    </a>
+                    of the
+                    <a href="https://www.tu.berlin/en/eecs/institutions/institutes/institute-of-software-engineering-and-theoretical-computer-science" class="text-link">
+                        <span>institute of software engineering and theoretical computer science</span>
+                    </a>
+                    at TU Berlin.
+                    The focus of my research is to guarantee confidentiality properties
+                    in time-sensitive systems. Besides my work as a researcher, I am also a teaching assistant. This
+                    includes supervision of theses, project work with small groups of students, and a large
+                    undergraduate courses with over 700 students.
+                </p>
+
+                <h2>Education</h2>
+                <p>
+                    I completed my B.Sc. and M.Sc. degrees in computer science at TU Berlin.
+                    Throughout my studies, I found topics in theoretical computer science and especially regarding formal verification most interesting.
+                    In both my theses, I worked on formal verification methods of confidentiality properties of timed systems.
+                    In particular, as part of my master thesis, I first proved the opacity verification problem for discrete-timed automata to be decidable - a result that has been independently re-established multiple times since.
+                    I continue the topic of verification and enforcement of opacity of discrete-timed automata in my research as a PhD student.
+                    My goal with my PhD is to develop scalable methods to guarantee timed opacity that can be used on actual real-world applications (see publications for more information).
+                </p>
+
+                <h3>PhD Student<span class="small-text"> (since August 2023)</span></h3>
+                <p><b>Topic:</b> Formal Verification and Enforcement of Confidentiality Properties in Time-Sensitive
+                    Systems.</p>
+                <p><b>Supervisor:</b> Prof. Dr. Sabine Glesner</p>
+
+                <h3>Master of Science<span class="small-text"> (2023)</span></h3>
+                <p><b>Thesis:</b> Verifying and Enforcing Opacity of Timed Automata</p>
+                <p><b>Examiners:</b> Prof. Dr. Sabine Glesner, Prof. Dr. Stephan Kreutzer</p>
+
+                <h3>Bachelor of Science<span class="small-text"> (2020)</span></h3>
+                <p><b>Thesis:</b> Improving Confidentiality Enforcement through Symbolic Information Flow Analysis</p>
+                <p><b>Examiners:</b> Prof. Dr. Sabine Glesner, Prof. Dr. Florian Tschorsch</p>
+
+                <h2>Teaching Experience</h2>
+                <p>
+                    Besides my studies I worked over four years as a tutor, teaching classes of up to 50 students at a time.
+                    This work involved also involved consultation hours and design and grading of homeworks and exams.
+                    With the start of my PhD, I also became a teaching assistant with the same teaching tasks and many additional responsibilities.
+                    These responsibilities mainly involve the organization and examination of classes.
+                    Besides that, I also supervise theses. 
+                </p>
+                <ul>
+                    <li>Teaching assistant (since August 2023)</li>
+                    <li>Tutor (2019-2023)</li>
+                </ul>
+                <h3>Responsibilities</h3>
+                <ul>
+                    <li>Online and offline tutorials</li>
+                    <li>Consultation hours</li>
+                    <li>Exercise design for homeworks and exams</li>
+                    <li>Class organization</li>
+                    <li>Grading</li>
+                    <li>Lectures</li>
+                </ul>
+                <h3>Taught classes</h3>
+                <ul>
+                    <li>Software Engineering and Programming Paradigms (Lecture)</li>
+                    <li>Software Engineering of Embedded/Cyber-Physical Systems (Lecture)</li>
+                    <li>Digital Systems (Lecture)</li>
+                    <li>Cyber-Physical Systems (Project)</li>
+                    <li>Software and Embedded Systems Engineering (Seminar)</li>
+                </ul>
+            </div>
+
+            <div id="publications" class="tab-content">
+                <h1>Publications</h1>
+                <script src="https://bibbase.org/show?bib=https://julianklein-cv.github.io/cv/lib.bib&jsonp=1"></script>
+            </div>
+
+            <div id="visits" class="tab-content">
+                <h1>Workshops and Visits</h1>
+
+                <h2>Workshop at Schloss Dagstuhl</h2>
+                <p>
+                    Workshop in research methods in software engineering training.<br>
+                    <img src="location_b.svg" class="small-icon">
+                    <span>Dagstuhl, Germany - October 2024</span><br>
+                </p>
+
+                <h2>Visit at University of Cagliari</h2>
+                <p>
+                    Guest presentation and scientific collaboration.<br>
+                    <img src="location_b.svg" class="small-icon">
+                    <span>Cagliary, Italy - September 2024</span><br>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showTab(tabId) {
+            // Hide all tabs
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+
+            // Show the selected tab
+            const activeTab = document.getElementById(tabId);
+            if (activeTab) {
+                activeTab.classList.add('active');
+            }
+        }
+    </script>
 
 </body>
+
 </html>
