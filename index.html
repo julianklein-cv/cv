@@ -1,6 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<template id="icfem24-paper">
+  <h2>Efficient State Estimation of Discrete-Timed Automata</h2>
+  <p>
+    A continuation of our work the verification of current-state opacity (CSO) on discrete timed automata.
+    We develop a new verification structure, called threshold estimator (TE).
+    We show that CSO can be efficiently verified using TE on several case studies.
+    The paper was published in the proceedings of the 2024 25th International Conference on Formal Engineering Methods (ICFEM).
+  </p>
+  <h3>Abstract</h3>
+  <p>State estimation is a fundamental method in control theory that has applications in privacy, fault diagnosis, and the verification of other state inference properties. State estimation methods for timed automata rely on discretizing time into atomic steps. These discrete time steps are enumerated in separate states, significantly limiting scalability for large, realistic systems. In this paper, we propose a more efficient state estimation method for discrete-timed automata. The key idea of our approach is to avoid the enumeration of single time steps when possible. We provide a formal definition of a new state estimator model and an efficient algorithmic approach to derive it from discrete-timed automata. We validate our method on 11 realistic case studies and show a significant decrease in computational costs.</p>
+  <h3>DOI</h3>
+  <p>
+    <a href="https://doi.org/10.1007/978-981-96-0617-7_6"class="text-link">
+      <span>https://doi.org/10.1007/978-981-96-0617-7_6</span>
+    </a>
+  </p>
+</template>
+
+<template id="icfem24-slides">
+  <h2>Efficient State Estimation of Discrete-Timed Automata (Slides)</h2>
+  <p>I presented our paper <strong>Efficient State Estimation of Discrete-Timed Automata</strong> at the 2024 25th International Conference on Formal Engineering Methods (ICFEM) on <strong>December 4, 2024</strong> in Hiroshima, Japan.</p>
+  <a href="timeline/2024/icfem24_slides.pdf" class="text-link" download="document.pdf">Download PDF</a>
+</template>
+
+<template id="details-2023">
+  <h2>📷 Eclipse Photo (2023)</h2>
+  <p>This was captured during the total solar eclipse in 2023.</p>
+  <img src="https://via.placeholder.com/500x250?text=Eclipse" style="width: 100%; border-radius: 8px;">
+</template>
+
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -238,58 +269,126 @@
       pointer-events: auto;
       position: relative;
     }
+
+    .timeline {
+  width: 50%;
+  height: 90%;
+  position: relative;
+  overflow-y: scroll;
+  padding: 20px;
+}
+
+
+    .timeline-container {
+              display: flex;
+              height: 100vh;
+              overflow: hidden;
+            }
+
+            .timeline {
+              position: relative;
+              flex: 1;
+              /*background: #f0f0f0;*/
+              overflow-y: scroll;
+              padding: 20px;
+            }
+
+            .info-panel {
+              width: 50%;
+              background: #fff;
+              border-left: 1px solid #ccc;
+              padding: 20px;
+              overflow-y: auto;
+            }
+
+            .timeline-year {
+              font-weight: bold;
+              margin: 40px 0 10px 0;
+              font-size: 1.2em;
+            }
+
+            .timeline-item {
+              position: absolute;
+              cursor: pointer;
+              transition: transform 0.2s ease;
+            }
+
+            .timeline-item:hover {
+              transform: scale(1.05);
+            }
+
+    .timeline-year-box {
+      /*background: #f0f0f0; /* match timeline background */
+      /*border-left: 2px solid #999;*/
+      border-top: none;
+      /*border-bottom: 2px solid black; /* black line below */
+      margin-bottom: 10px;
+      position: absolute;
+      overflow: visible;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    .timeline-year-label {
+      font-weight: bold;
+      font-size: 2.5em;  /* larger font size */
+      color: #333;
+      user-select: none;
+    }
+
   </style>
 </head>
+
 
 <body>
   <div class="side-panel">
     <img src="image.jpg" alt="Picture" class="sidebarimage">
     <h2>Julian Klein</h2>
     <p>
-      <img src="location.svg" alt="Icon" class="icon">
+      <img src="icons/location.svg" alt="Icon" class="icon">
       <span>Berlin, Germany</span>
     </p>
     <p>
-      <img src="mail.svg" alt="Icon" class="icon">
+      <img src="icons/mail.svg" alt="Icon" class="icon">
       <span>Mail: j.klein@tu-berlin.de</span>
     </p>
     <p>
-      <img src="gmail.svg" alt="Icon" class="icon">
+      <img src="icons/gmail.svg" alt="Icon" class="icon">
       <span>GMail: jbh.klein@gmail.com</span>
     </p>
     <p>
       <a href="https://www.tu.berlin/en" class="sidebar-link">
-        <img src="university.svg" alt="Icon" class="icon">
+        <img src="icons/university.svg" alt="Icon" class="icon">
         <span>Institution: <b>TU Berlin</b></span>
       </a>
     </p>
     <p>
       <a href="https://orcid.org/my-orcid?orcid=0009-0005-2899-3934" class="sidebar-link">
-        <img src="orcid.svg" alt="Icon" class="icon">
+        <img src="icons/orcid.svg" alt="Icon" class="icon">
         <span>ORCID: 0009-0005-2899-3934</span>
       </a>
     </p>
     <p>
       <a href="https://scholar.google.com/citations?user=Uv28q84AAAAJ&hl=de&oi=sra" class="sidebar-link">
-        <img src="scholar.svg" alt="Icon" class="icon">
+        <img src="icons/scholar.svg" alt="Icon" class="icon">
         <span>Google Scholar</span>
       </a>
     </p>
     <p>
       <a href="https://www.researchgate.net/profile/Julian-Klein-11" class="sidebar-link">
-        <img src="researchgate.svg" alt="Icon" class="icon">
+        <img src="icons/researchgate.svg" alt="Icon" class="icon">
         <span>ResearchGate</span>
       </a>
     </p>
     <p>
       <a href="https://gitlab.com/julianklein/" class="sidebar-link">
-        <img src="gitlab.svg" alt="Icon" class="icon">
+        <img src="icons/gitlab.svg" alt="Icon" class="icon">
         <span>Gitlab</span>
       </a>
     </p>
     <p>
       <a href="https://dblp.org/pid/03/9150-1.html" class="sidebar-link">
-        <img src="dblp.svg" alt="Icon" class="icon">
+        <img src="icons/dblp.svg" alt="Icon" class="icon">
         <span>DBLP</span>
       </a>
     </p>
@@ -301,8 +400,19 @@
       <button class="nav-button" onclick="showTab('cv')"><span>Curriculum Vitae</span></button>
       <button class="nav-button" onclick="showTab('publications')"><span>Publications</span></button>
       <button class="nav-button" onclick="showTab('visits')"><span>Workshops and Visits</span></button>
+      <button class="nav-button" onclick="showTab('main')"><span>Main</span></button>
     </div>
 
+    <div id="main" class="tab-content">
+      <div class="timeline-container">
+        <div class="timeline" id="timeline">
+          <!-- Timeline items will be injected here -->
+        </div>
+        <div class="info-panel" id="infoPanel">
+          <h2>Click on icons on the timeline to display more information here.</h2>
+        </div>
+      </div>
+    </div>
     <div id="cv" class="tab-content active">
       <h1>Curriculum Vitae</h1>
 
@@ -391,7 +501,7 @@
       <h1>Workshops and Visits</h1>
 
       <h2>Workshop at Schloss Dagstuhl</h2>
-      <img src="location_b.svg" class="small-icon">
+      <img src="icons/location_b.svg" class="small-icon">
       <span>Dagstuhl, Germany - October 2024</span><br>
       <p>
         I participated in the 
@@ -405,7 +515,7 @@
       </p>
 
       <h2>Visit at University of Cagliari</h2>
-      <img src="location_b.svg" class="small-icon">
+      <img src="icons/location_b.svg" class="small-icon">
       <span>Cagliary, Italy - September 2024</span><br>
       <p>
         I started my first international collaboration with
@@ -427,6 +537,121 @@
   </div>
 
   <script>
+window.addEventListener("DOMContentLoaded", () => {
+  const timeline = document.getElementById("timeline");
+  const infoPanel = document.getElementById("infoPanel");
+
+  // List of years sorted descending (most recent first)
+  const years = [2025, 2024, 2023];
+
+  // We'll calculate sizes relative to timeline size
+  const timelineRect = timeline.getBoundingClientRect();
+  const timelineHeight = timeline.clientHeight;
+  const timelineWidth = timeline.clientWidth;
+
+  // For example, year boxes take 80% width of timeline container
+  const yearBoxWidth = timelineWidth * 0.95;
+
+  // Split timelineHeight evenly among years with some margin
+  const marginBetweenYears = 10;
+  const totalMargins = marginBetweenYears * (years.length - 1);
+  const yearBoxHeight = (timelineHeight - totalMargins) / years.length;
+
+  // Define year boxes with computed sizes and positions
+  const yearBoxes = years.map((year, index) => {
+    return {
+      year: year,
+      y: index * (yearBoxHeight + marginBetweenYears),
+      height: yearBoxHeight,
+      width: yearBoxWidth
+    };
+  });
+
+  // Example timeline items
+  const items = [
+    { id: 1, year: 2024, x: 150, y: 30, content: "Efficient State Estimation of Discrete-Timed Automata", icon: "icons/paper.svg", templateId: "icfem24-paper" },
+    { id: 2, year: 2024, x: 150, y: 80, content: "Efficient State Estimation of Discrete-Timed Automata", icon: "icons/slides.svg", templateId: "icfem24-slides" },
+    { id: 3, year: 2023, x: 180, y: 100, content: "📷 Eclipse", icon: "icons/acm_b.svg", templateId: "details-2023" }
+  ];
+
+  // Clear timeline before rendering
+  timeline.innerHTML = "";
+
+  // your size-dependent code here
+  // Render year boxes
+  yearBoxes.forEach(entry => {
+    const yearBox = document.createElement("div");
+    yearBox.className = "timeline-year-box";
+    yearBox.style.position = "absolute";
+    yearBox.style.top = `${entry.y}px`;
+    yearBox.style.left = `0px`;
+    yearBox.style.height = `${entry.height}px`;
+    yearBox.style.width = `${entry.width}px`;
+
+    const yearLabel = document.createElement("div");
+    yearLabel.className = "timeline-year-label";
+    yearLabel.textContent = entry.year;
+    yearLabel.style.fontSize = "2em";
+    yearLabel.style.color = "#333";
+
+    const separator = document.createElement("div");
+    separator.style.position = "absolute";
+    separator.style.top = `${entry.y}px`; // right below the year box
+    separator.style.left = `0px`;
+    separator.style.width = `${entry.width}px`;
+    separator.style.height = "3px";  // thickness of the bar
+    separator.style.backgroundColor = "#999";
+    timeline.appendChild(separator);
+
+    yearBox.appendChild(yearLabel);
+    timeline.appendChild(yearBox);
+  });
+
+  // Render items relative to their year box
+  let mostRecentItem = null;
+
+  items.forEach(item => {
+    const yearObj = yearBoxes.find(yb => yb.year === item.year);
+    if (!yearObj) return;
+
+    const el = document.createElement("div");
+    el.className = "timeline-item";
+    el.style.position = "absolute";
+    el.style.top = `${yearObj.y + item.y}px`;
+    el.style.left = `${item.x}px`;
+    el.style.cursor = "pointer";
+    el.style.padding = "5px 10px";
+    el.style.background = "#fff";
+    el.style.border = "1px solid #ccc";
+    el.style.borderRadius = "4px";
+    el.style.boxShadow = "1px 1px 3px rgba(0,0,0,0.1)";
+    el.style.transition = "transform 0.2s ease";
+    el.innerHTML = `<img src="` + item.icon + `", width="23", height="23">` + item.content;
+
+
+    el.onmouseenter = () => { el.style.transform = "scale(1.05)"; };
+    el.onmouseleave = () => { el.style.transform = "scale(1)"; };
+
+    el.onclick = () => {
+      const tmpl = document.getElementById(item.templateId);
+      infoPanel.innerHTML = tmpl ? tmpl.innerHTML : "<p style='color:red;'>Content not found.</p>";
+    };
+
+    timeline.appendChild(el);
+
+    if (!mostRecentItem || item.year > mostRecentItem.year) mostRecentItem = item;
+  });
+
+  // Show info panel for most recent item on load
+  if (mostRecentItem) {
+    const tmpl = document.getElementById(mostRecentItem.templateId);
+    infoPanel.innerHTML = tmpl ? tmpl.innerHTML : "<p style='color:red;'>Content not found.</p>";
+  }
+});
+
+
+
+
     function showTab(tabId) {
       // Hide all tabs
       document.querySelectorAll('.tab-content').forEach(tab => {
