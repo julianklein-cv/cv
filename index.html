@@ -1,35 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<template id="icfem24-paper">
-  <h2>Efficient State Estimation of Discrete-Timed Automata</h2>
+<template id="icfem25">
+  <h2>A Unified Method to Efficiently Verify Opacity of Discrete-Timed Automata</h2>
   <p>
-    A continuation of our work the verification of current-state opacity (CSO) on discrete timed automata.
-    We develop a new verification structure, called threshold estimator (TE).
-    We show that CSO can be efficiently verified using TE on several case studies.
-    The paper was published in the proceedings of the 2024 25th International Conference on Formal Engineering Methods (ICFEM).
+    Building on our definition of threshold estimators and the concurrent composition by Zhang and Giua, we define the
+    timed concurrent composition (TCC) as a verification structure to verify several timed opacity notions on
+    discrete-timed automata.
+    This is thus another continuation on prevoius works on the verification of opacity in discrete-timed automata.
+    Moreover, this was my first international collaboration with Kuize Zhang.
   </p>
   <h3>Abstract</h3>
-  <p>State estimation is a fundamental method in control theory that has applications in privacy, fault diagnosis, and the verification of other state inference properties. State estimation methods for timed automata rely on discretizing time into atomic steps. These discrete time steps are enumerated in separate states, significantly limiting scalability for large, realistic systems. In this paper, we propose a more efficient state estimation method for discrete-timed automata. The key idea of our approach is to avoid the enumeration of single time steps when possible. We provide a formal definition of a new state estimator model and an efficient algorithmic approach to derive it from discrete-timed automata. We validate our method on 11 realistic case studies and show a significant decrease in computational costs.</p>
-  <h3>DOI</h3>
+  <p>Opacity is a powerful confidentiality property which guarantees that secret information of a system cannot be
+    inferred from its observable behavior. To account for timing attacks, opacity has been extended to continuous-time
+    systems, but the verification problem was proven to be generally undecidable. As a result, multiple recent works
+    study the opacity verification problem of discrete-timed automata. The advantage of a discrete time setting is that
+    it can discretize any timed automaton as a discrete-state system, where opacity can be verified. However, such
+    verification methods usually rely on separating time steps into distinct hybrid states. This results in state
+    explosion and limited scalability for real-world problems.
+    In this paper, we present a new, more efficient verification method for opacity in a discrete time setting that
+    avoids the state explosion problem. Our verification method groups multiple time steps to intervals, instead of
+    evaluating each time step individually. We define four timed opacity notions and show that our method is capable of
+    verifying all of them in a unified manner. We analyze the efficiency of our method on a case study of a wireless
+    sensor network and randomized systems.</p>
+  <h3>Link</h3>
   <p>
-    <a href="https://doi.org/10.1007/978-981-96-0617-7_6"class="text-link">
+    <img src="icons/paper.svg" class="small-icon"><a href="TODO" class="text-link">
+      <span>TODO</span>
+    </a>
+  </p>
+  <h2>Artifact</h2>
+  <p>
+    We provide a software prototype as an artifact.
+    All presented results in the paper can be reproduced using our artifact.
+    The artifact was not evaluated as there was no artifact evaluation at ICFEM 2025.
+  </p>
+  <h3>Link</h3>
+  <p>
+    <img src="icons/artifact.svg" class="small-icon"><a href="https://doi.org/10.5281/zenodo.15237829"
+      class="text-link">
+      <span>https://doi.org/10.5281/zenodo.15237829</span>
+    </a>
+  </p>
+  <h2>Slides</h2>
+  <p>I presented our paper <strong>A Unified Method to Efficiently Verify Opacity of Discrete-Timed Automata</strong> at
+    the 2025 26th International Conference on Formal Engineering Methods (ICFEM) on <strong>TODO</strong> in Hangzhou,
+    China.</p>
+  <img src="icons/slides.svg" class="small-icon"><a href="timeline/2025/icfem25_slides.pdf" class="text-link"
+    download="document.pdf">Download Slides</a>
+</template>
+
+
+
+
+
+
+
+<template id="icfem24">
+  <h2>Efficient State Estimation of Discrete-Timed Automata</h2>
+  <p>
+    A continuation of our work on the verification of current-state opacity (CSO) on discrete timed automata.
+    We develop a new verification structure, called threshold estimator (TE).
+    We show that CSO can be efficiently verified using TE on several case studies.
+    The paper was published in the proceedings of the 2024 25th International Conference on Formal Engineering Methods
+    (ICFEM).
+  </p>
+  <h3>Abstract</h3>
+  <p>State estimation is a fundamental method in control theory that has applications in privacy, fault diagnosis, and
+    the verification of other state inference properties. State estimation methods for timed automata rely on
+    discretizing time into atomic steps. These discrete time steps are enumerated in separate states, significantly
+    limiting scalability for large, realistic systems. In this paper, we propose a more efficient state estimation
+    method for discrete-timed automata. The key idea of our approach is to avoid the enumeration of single time steps
+    when possible. We provide a formal definition of a new state estimator model and an efficient algorithmic approach
+    to derive it from discrete-timed automata. We validate our method on 11 realistic case studies and show a
+    significant decrease in computational costs.</p>
+  <h3>Link</h3>
+  <p>
+    <img src="icons/paper.svg" class="small-icon"><a href="https://doi.org/10.1007/978-981-96-0617-7_6"
+      class="text-link">
       <span>https://doi.org/10.1007/978-981-96-0617-7_6</span>
+    </a>
+  </p>
+  <h2>Artifact</h2>
+  <p>
+    We provide a software prototype and all case studies in our artifact.
+    All presented results in the paper can be reproduced using our artifact.
+    The artifact was not evaluated as there was no artifact evaluation at ICFEM 2024.
+  </p>
+  <h3>Link</h3>
+  <p>
+    <img src="icons/artifact.svg" class="small-icon"><a href="https://gitlab.com/julianklein/threshold-estimation"
+      class="text-link">
+      <span>https://gitlab.com/julianklein/threshold-estimation</span>
+    </a>
+  </p>
+  <h2>Slides</h2>
+  <p>I presented our paper <strong>Efficient State Estimation of Discrete-Timed Automata</strong> at the 2024 25th
+    International Conference on Formal Engineering Methods (ICFEM) on <strong>December 4, 2024</strong> in Hiroshima,
+    Japan.</p>
+  <img src="icons/slides.svg" class="small-icon"><a href="timeline/2024/icfem24_slides.pdf" class="text-link"
+    download="document.pdf">Download Slides</a>
+</template>
+
+
+
+
+
+
+
+
+
+<template id="formalise24">
+  <h2>Verifying Opacity of Discrete-Timed Automata</h2>
+  <p>
+    We prove that opacity can be verified in discrete-timed automata.
+    To facilitate this, we provide a verification method for current-state opacity (CSO) using tick automata.
+    To make the method more efficient, we develop the local time abstraction, reducing the size of the tick automata.
+    Our paper is the first to report a decidability result on the verification problem of opacity in discrete timed
+    automata.
+    However, two concurrent works by
+    <a href="https://doi.org/10.1007/978-981-96-0617-7_4" class="text-link">
+      <span>André et al.</span>
+    </a>
+    and
+    <a href="https://doi.org/10.1007/978-3-031-71162-6_32" class="text-link">
+      <span>An et al.</span>
+    </a>
+    also prove this decidability later in 2024.
+    Our paper was published in the proceedings of the 2024 IEEE/ACM 12th International Conference on Formal Methods in
+    Software Engineering (FormaliSE).
+  </p>
+  <h3>Abstract</h3>
+  <p>Opacity is a powerful confidentiality property that holds if a system cannot leak secret information through
+    observable behavior. In recent years, time has become an increasingly popular attack vector. The notion of opacity
+    has therefore been extended to timed automata (TA). However, the verification of opacity of TA has been proven to be
+    undecidable for the commonly used dense time model. To make the problem decidable, state of the art approaches
+    consider weaker notions of opacity or heavily restrict the class of considered TA, resulting in unrealistic threat
+    models.
+    In this paper, we address the problem of verifying opacity of TA without restrictions. For this purpose, we consider
+    a discrete time setting. We present a novel algorithm to transform TA to equivalent finite automata (FA) and then
+    use known methods to verify opacity of the resulting FA. To improve the efficiency of our algorithm, we use a novel
+    time abstraction that significantly reduces the state space of the resulting FA, improving the scalability of our
+    approach. We validate our method using randomized systems, as well as four case studies from the literature showing
+    that our approach is applicable in practice.</p>
+  <h3>Link</h3>
+  <p>
+    <img src="icons/paper.svg" class="small-icon"><a href="https://doi.org/10.1145/3644033.3644376" class="text-link">
+      <span>https://doi.org/10.1145/3644033.3644376</span>
+    </a>
+  </p>
+  <h2>Artifact</h2>
+  <p>
+    We provide a software prototype and all case studies in our artifact.
+    All presented results in the paper can be reproduced using our artifact.
+    The artifact was given the available and functional badge by the artifact evaluation committee of FormaliSE 2024.
+  </p>
+  <h3>Link</h3>
+  <p>
+    <img src="icons/artifact.svg" class="small-icon"><a href="https://doi.org/10.6084/m9.figshare.24790842"
+      class="text-link">
+      <span>https://doi.org/10.6084/m9.figshare.24790842</span>
+    </a>
+  </p>
+  <h2>Slides</h2>
+  <p>I presented our paper <strong>Verifying Opacity of Discrete-Timed Automata</strong> at the 2024 IEEE/ACM 12th
+    International Conference on Formal Methods in Software Engineering (FormaliSE) on <strong>April 14, 2024</strong> in
+    Lisbon, Portugal.</p>
+  <img src="icons/slides.svg" class="small-icon"><a href="timeline/2024/formalise24_slides.pdf" class="text-link"
+    download="document.pdf">Download Slides</a>
+</template>
+
+
+
+
+
+
+
+<template id="fllm24">
+  <h2>A Systematic Study on the Potentials and Limitations of LLM-assisted Software Development</h2>
+  <p>
+    I co-authored this paper on LLM-assisted software development.
+    It was joint work with my colleagues and two students who wrote their theses on the topic.
+  </p>
+  <h3>Abstract</h3>
+  <p>In the field of software engineering, Large Language Models like GPT have gained enormous interest in recent times.
+    With its expanding area of application, ChatGPT has become an essential tool for code generation. Several studies
+    have shown that the quality of generated code depends on the underlying dataset and the quality of the provided
+    prompts. However, its precise capabilities and limitations remain uncertain, as does the extent of assistance
+    required for effective code generation. We present the results of our systematic study in which we investigate the
+    potential of ChatGPT, based on GPT-4, in solving assignments of an introductory-level programming class. We examine
+    the impact of programming language choice, different prompting strategies, and the results of the model compared to
+    those of real students. Our results show that ChatGPT cannot solve the assignments independently, but outperforms
+    the average student with human assistance.</p>
+  <h3>Link</h3>
+  <p>
+    <img src="icons/paper.svg" class="small-icon"><a href="https://doi.org/10.1109/FLLM63129.2024.10852455"
+      class="text-link">
+      <span>https://doi.org/10.1109/FLLM63129.2024.10852455</span>
     </a>
   </p>
 </template>
 
-<template id="icfem24-slides">
-  <h2>Efficient State Estimation of Discrete-Timed Automata (Slides)</h2>
-  <p>I presented our paper <strong>Efficient State Estimation of Discrete-Timed Automata</strong> at the 2024 25th International Conference on Formal Engineering Methods (ICFEM) on <strong>December 4, 2024</strong> in Hiroshima, Japan.</p>
-  <a href="timeline/2024/icfem24_slides.pdf" class="text-link" download="document.pdf">Download PDF</a>
+
+
+<template id="dagstuhl">
+  <h2>Workshop at Schloss Dagstuhl</h2>
+  <p><img src="icons/location_g.svg" class="small-icon">Dagstuhl, Germany</p>
+  <p><img src="icons/date.svg" class="small-icon">October 2024</p>
+  <p>
+    I participated in the
+    <a href="https://www.dagstuhl.de/en/seminars/seminar-calendar/seminar-details/24443" class="text-link">
+      <span>research methods in software engineering training</span>
+    </a>
+    2024 at Schloss Dagstuhl.
+    The training consisted of several invited lectures on different topics, related to research methods on software
+    engineering.
+    We discussed the topics of the lectures (and many related topics) in breakout groups.
+  </p>
+  <img src="timeline/2024/dagstuhl.jpg" style="margin-top: 40px; max-width: 50%; height: auto;">
+  <p>View from a window of Schloss Dagstuhl.</p>
 </template>
 
-<template id="details-2023">
-  <h2>📷 Eclipse Photo (2023)</h2>
-  <p>This was captured during the total solar eclipse in 2023.</p>
-  <img src="https://via.placeholder.com/500x250?text=Eclipse" style="width: 100%; border-radius: 8px;">
+<template id="cagliari">
+  <h2>Visit at University of Cagliari</h2>
+  <p><img src="icons/location_g.svg" class="small-icon">Cagliari, Italy</p>
+  <p><img src="icons/date.svg" class="small-icon">September 2024</p>
+  <p>
+    I started my first international collaboration with
+    <a href="https://scholar.google.com/citations?user=UAHzXXMAAAAJ&hl=en" class="text-link">
+      <span>Kuize Zhang</span>
+    </a>
+    in 2024.
+    At the time, he was working at the university of Cagliari as part of the
+    <a href="http://dipartimenti.unica.it/ingegneriaelettricaedelettronica/research/research-groups/systems-and-control/?lang=en"
+      class="text-link">
+      <span>Automatic Control </span>
+    </a>
+    group.
+    I visited the group to meet in person and accelerate the progress on our collaborative work.
+    I also gave a presentation about my research at the Autolab seminar of the Automatic Control group.
+  </p>
+  <img src="timeline/2024/cagliari.jpg" style="margin-top: 40px; max-width: 50%; height: auto;">
+  <p>View on Cagliari near the university of Cagliari.</p>
 </template>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <head>
@@ -41,6 +276,11 @@
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+    }
+
+    .indented {
+      text-indent: 2em;
+      /* Adjust the indent size */
     }
 
     body {
@@ -270,52 +510,79 @@
       position: relative;
     }
 
+    .tlcontainer {
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .tline {
+      width: 50%;
+      height: 100%;
+      position: relative;
+      overflow-y: scroll;
+      padding: 20px;
+    }
+
+    .tlpanel {
+      width: 50%;
+      background: #fff;
+      border-left: 1px solid #ccc;
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    .clickable {
+      color: rgb(128, 27, 19);
+      cursor: pointer;
+    }
+
     .timeline {
-  width: 50%;
-  height: 90%;
-  position: relative;
-  overflow-y: scroll;
-  padding: 20px;
-}
+      width: 50%;
+      height: 90%;
+      position: relative;
+      overflow-y: scroll;
+      padding: 20px;
+    }
 
 
     .timeline-container {
-              display: flex;
-              height: 100vh;
-              overflow: hidden;
-            }
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+    }
 
-            .timeline {
-              position: relative;
-              flex: 1;
-              /*background: #f0f0f0;*/
-              overflow-y: scroll;
-              padding: 20px;
-            }
+    .timeline {
+      position: relative;
+      flex: 1;
+      /*background: #f0f0f0;*/
+      overflow-y: scroll;
+      padding: 20px;
+    }
 
-            .info-panel {
-              width: 50%;
-              background: #fff;
-              border-left: 1px solid #ccc;
-              padding: 20px;
-              overflow-y: auto;
-            }
+    .info-panel {
+      width: 50%;
+      background: #fff;
+      border-left: 1px solid #ccc;
+      padding: 20px;
+      overflow-y: auto;
+    }
 
-            .timeline-year {
-              font-weight: bold;
-              margin: 40px 0 10px 0;
-              font-size: 1.2em;
-            }
+    .timeline-year {
+      font-weight: bold;
+      margin: 40px 0 10px 0;
+      font-size: 1.2em;
+    }
 
-            .timeline-item {
-              position: absolute;
-              cursor: pointer;
-              transition: transform 0.2s ease;
-            }
+    .timeline-item {
+      position: absolute;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
 
-            .timeline-item:hover {
-              transform: scale(1.05);
-            }
+    .timeline-item:hover {
+      transform: scale(1.05);
+    }
 
     .timeline-year-box {
       /*background: #f0f0f0; /* match timeline background */
@@ -331,11 +598,11 @@
 
     .timeline-year-label {
       font-weight: bold;
-      font-size: 2.5em;  /* larger font size */
+      font-size: 2.5em;
+      /* larger font size */
       color: #333;
       user-select: none;
     }
-
   </style>
 </head>
 
@@ -397,23 +664,72 @@
   <div class="main">
 
     <div class="top-nav">
+      <button class="nav-button" onclick="showTab('tl')"><span>Time Line</span></button>
       <button class="nav-button" onclick="showTab('cv')"><span>Curriculum Vitae</span></button>
       <button class="nav-button" onclick="showTab('publications')"><span>Publications</span></button>
-      <button class="nav-button" onclick="showTab('visits')"><span>Workshops and Visits</span></button>
-      <button class="nav-button" onclick="showTab('main')"><span>Main</span></button>
     </div>
+    <div id="tl" class="tab-content active">
+      <div class="tlcontainer">
+        <div class="tline" id="tline">
+          <h1>2025</h1>
+          <h2>Publications</h2>
+          <h3>
+            <img src="icons/paper.svg" class="small-icon"><img src="icons/artifact.svg" class="small-icon"><img
+              src="icons/slides.svg" class="small-icon">
+            <span class="clickable" data-template-id="icfem25">A Unified Method to Efficiently Verify Opacity of
+              Discrete-Timed Automata</span>
+          </h3>
+          <p class="indented">26th International Conference on Formal Engineering Methods (ICFEM), in Hangzhou, China
+          </p>
+          <h2>Other Activities</h2>
 
-    <div id="main" class="tab-content">
-      <div class="timeline-container">
-        <div class="timeline" id="timeline">
-          <!-- Timeline items will be injected here -->
+
+
+          <h1>2024</h1>
+          <h2>Workshops, Summer Schools, and Visits</h2>
+          <h3>
+            <img src="icons/trip.svg" class="small-icon">
+            <span class="clickable" data-template-id="dagstuhl">Workshop at Schloss Dagstuhl</span>
+          </h3>
+          <h3>
+            <img src="icons/trip.svg" class="small-icon">
+            <span class="clickable" data-template-id="cagliari">Visit at University of Cagliari</span>
+          </h3>
+
+          <h2>Publications</h2>
+          <h3>
+            <img src="icons/paper.svg" class="small-icon"><img src="icons/artifact.svg" class="small-icon"><img
+              src="icons/slides.svg" class="small-icon">
+            <span class="clickable" data-template-id="icfem24">Efficient State Estimation of Discrete-Timed
+              Automata</span>
+          </h3>
+          <p class="indented">25th International Conference on Formal Engineering Methods (ICFEM), in Hiroshima, Japan
+          </p>
+
+          <h3>
+            <img src="icons/paper.svg" class="small-icon"><img src="icons/artifact.svg" class="small-icon"><img
+              src="icons/slides.svg" class="small-icon">
+            <span class="clickable" data-template-id="formalise24">Verifying Opacity of Discrete-Timed Automata</span>
+          </h3>
+          <p class="indented">12th International Conference on Formal Methods in Software Engineering (FormaliSE), in
+            Lisbon, Portugal
+          </p>
+
+          <h3>
+            <img src="icons/paper.svg" class="small-icon">
+            <span class="clickable" data-template-id="fllm24">A Systematic Study on the Potentials and Limitations of
+              LLM-assisted Software Development</span>
+          </h3>
+          <p class="indented">2nd International Conference on Foundation and Large Language Models (FLLM), Dubai, United
+            Arab Emirates
+          </p>
         </div>
-        <div class="info-panel" id="infoPanel">
-          <h2>Click on icons on the timeline to display more information here.</h2>
+        <div class="tlpanel" id="tlpanel">
+          <h2>Click on an item on the left to display more information here.</h2>
         </div>
-      </div>
+      </div class="tlcontainer">
     </div>
-    <div id="cv" class="tab-content active">
+    <div id="cv" class="tab-content">
       <h1>Curriculum Vitae</h1>
 
       <p>
@@ -504,13 +820,13 @@
       <img src="icons/location_b.svg" class="small-icon">
       <span>Dagstuhl, Germany - October 2024</span><br>
       <p>
-        I participated in the 
-        <a href="https://www.dagstuhl.de/en/seminars/seminar-calendar/seminar-details/24443"
-          class="text-link">
+        I participated in the
+        <a href="https://www.dagstuhl.de/en/seminars/seminar-calendar/seminar-details/24443" class="text-link">
           <span>research methods in software engineering training</span>
         </a>
         2024 at Schloss Dagstuhl.
-        The training consisted of several invited lectures on different topics, related to research methods on software engineering.
+        The training consisted of several invited lectures on different topics, related to research methods on software
+        engineering.
         We discussed the topics of the lectures (and many related topics) in breakout groups.
       </p>
 
@@ -519,12 +835,11 @@
       <span>Cagliary, Italy - September 2024</span><br>
       <p>
         I started my first international collaboration with
-        <a href="https://scholar.google.com/citations?user=UAHzXXMAAAAJ&hl=en"
-          class="text-link">
+        <a href="https://scholar.google.com/citations?user=UAHzXXMAAAAJ&hl=en" class="text-link">
           <span>Kuize Zhang</span>
         </a>
         in 2024.
-        At the time, he was working at the university of Cagliari as part of the 
+        At the time, he was working at the university of Cagliari as part of the
         <a href="http://dipartimenti.unica.it/ingegneriaelettricaedelettronica/research/research-groups/systems-and-control/?lang=en"
           class="text-link">
           <span>Automatic Control </span>
@@ -537,117 +852,26 @@
   </div>
 
   <script>
-window.addEventListener("DOMContentLoaded", () => {
-  const timeline = document.getElementById("timeline");
-  const infoPanel = document.getElementById("infoPanel");
 
-  // List of years sorted descending (most recent first)
-  const years = [2025, 2024, 2023];
+    const panel = document.getElementById("tlpanel");
+    const clickableElements = document.querySelectorAll(".clickable");
 
-  // We'll calculate sizes relative to timeline size
-  const timelineRect = timeline.getBoundingClientRect();
-  const timelineHeight = timeline.clientHeight;
-  const timelineWidth = timeline.clientWidth;
+    clickableElements.forEach(el => {
+      el.addEventListener("click", () => {
+        const templateId = el.getAttribute("data-template-id");
+        const template = document.getElementById(templateId);
 
-  // For example, year boxes take 80% width of timeline container
-  const yearBoxWidth = timelineWidth * 0.95;
-
-  // Split timelineHeight evenly among years with some margin
-  const marginBetweenYears = 10;
-  const totalMargins = marginBetweenYears * (years.length - 1);
-  const yearBoxHeight = (timelineHeight - totalMargins) / years.length;
-
-  // Define year boxes with computed sizes and positions
-  const yearBoxes = years.map((year, index) => {
-    return {
-      year: year,
-      y: index * (yearBoxHeight + marginBetweenYears),
-      height: yearBoxHeight,
-      width: yearBoxWidth
-    };
-  });
-
-  // Example timeline items
-  const items = [
-    { id: 1, year: 2024, x: 150, y: 30, content: "Efficient State Estimation of Discrete-Timed Automata", icon: "icons/paper.svg", templateId: "icfem24-paper" },
-    { id: 2, year: 2024, x: 150, y: 80, content: "Efficient State Estimation of Discrete-Timed Automata", icon: "icons/slides.svg", templateId: "icfem24-slides" },
-    { id: 3, year: 2023, x: 180, y: 100, content: "📷 Eclipse", icon: "icons/acm_b.svg", templateId: "details-2023" }
-  ];
-
-  // Clear timeline before rendering
-  timeline.innerHTML = "";
-
-  // your size-dependent code here
-  // Render year boxes
-  yearBoxes.forEach(entry => {
-    const yearBox = document.createElement("div");
-    yearBox.className = "timeline-year-box";
-    yearBox.style.position = "absolute";
-    yearBox.style.top = `${entry.y}px`;
-    yearBox.style.left = `0px`;
-    yearBox.style.height = `${entry.height}px`;
-    yearBox.style.width = `${entry.width}px`;
-
-    const yearLabel = document.createElement("div");
-    yearLabel.className = "timeline-year-label";
-    yearLabel.textContent = entry.year;
-    yearLabel.style.fontSize = "2em";
-    yearLabel.style.color = "#333";
-
-    const separator = document.createElement("div");
-    separator.style.position = "absolute";
-    separator.style.top = `${entry.y}px`; // right below the year box
-    separator.style.left = `0px`;
-    separator.style.width = `${entry.width}px`;
-    separator.style.height = "3px";  // thickness of the bar
-    separator.style.backgroundColor = "#999";
-    timeline.appendChild(separator);
-
-    yearBox.appendChild(yearLabel);
-    timeline.appendChild(yearBox);
-  });
-
-  // Render items relative to their year box
-  let mostRecentItem = null;
-
-  items.forEach(item => {
-    const yearObj = yearBoxes.find(yb => yb.year === item.year);
-    if (!yearObj) return;
-
-    const el = document.createElement("div");
-    el.className = "timeline-item";
-    el.style.position = "absolute";
-    el.style.top = `${yearObj.y + item.y}px`;
-    el.style.left = `${item.x}px`;
-    el.style.cursor = "pointer";
-    el.style.padding = "5px 10px";
-    el.style.background = "#fff";
-    el.style.border = "1px solid #ccc";
-    el.style.borderRadius = "4px";
-    el.style.boxShadow = "1px 1px 3px rgba(0,0,0,0.1)";
-    el.style.transition = "transform 0.2s ease";
-    el.innerHTML = `<img src="` + item.icon + `", width="23", height="23">` + item.content;
+        if (template) {
+          const clone = template.content.cloneNode(true);
+          panel.innerHTML = ""; // Clear previous content
+          panel.appendChild(clone);
+        } else {
+          panel.innerHTML = "<p>Template not found.</p>";
+        }
+      });
+    });
 
 
-    el.onmouseenter = () => { el.style.transform = "scale(1.05)"; };
-    el.onmouseleave = () => { el.style.transform = "scale(1)"; };
-
-    el.onclick = () => {
-      const tmpl = document.getElementById(item.templateId);
-      infoPanel.innerHTML = tmpl ? tmpl.innerHTML : "<p style='color:red;'>Content not found.</p>";
-    };
-
-    timeline.appendChild(el);
-
-    if (!mostRecentItem || item.year > mostRecentItem.year) mostRecentItem = item;
-  });
-
-  // Show info panel for most recent item on load
-  if (mostRecentItem) {
-    const tmpl = document.getElementById(mostRecentItem.templateId);
-    infoPanel.innerHTML = tmpl ? tmpl.innerHTML : "<p style='color:red;'>Content not found.</p>";
-  }
-});
 
 
 
