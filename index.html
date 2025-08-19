@@ -201,7 +201,21 @@
   </p>
 </template>
 
+<template id="mod">
+  <h2>Marktoberdorf Summer School</h2>
+  <p><img src="icons/location_g.svg" class="small-icon">Marktoberdorf, Germany</p>
+  <p><img src="icons/date.svg" class="small-icon">August 2025</p>
+  <p>
+    I participated in the
+    <a href="https://en.wikipedia.org/wiki/Summer_School_Marktoberdorf" class="text-link">
+      <span>Marktoberdorf Summer School</span>
+    </a>
+    2025.
 
+  </p>
+  <img src="timeline/2025/mod.jpg" style="margin-top: 40px; max-width: 50%; height: auto;">
+  <p>The Internat of the Marktoberdorf Gymnasium.</p>
+</template>
 
 <template id="dagstuhl">
   <h2>Workshop at Schloss Dagstuhl</h2>
@@ -315,13 +329,50 @@
       transform: scale(0.8);
     }
 
-
     .toggle-btn {
       cursor: pointer;
       background: transparent;
       color: white;
       border: none;
       font-size: 1.5rem;
+    }
+
+    .tlpanel {
+      width: 50%;
+      background: #fff;
+      border-left: 1px solid #ccc;
+      padding: 20px;
+      overflow-y: auto;
+      transition: width 0.0s ease, padding 0.0s ease, border-left 0.0s ease;
+    }
+
+    .tlpanel.collapsed {
+      width: 0;
+      padding: 0;
+      border-left: none;
+    }
+
+    .tlpanel .panel-content {
+      transition: opacity 0.0s ease, transform 0.0s ease;
+    }
+
+    .tlpanel.collapsed .panel-content {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+
+    .tltoggle-btn {
+      cursor: pointer;
+      background: transparent;
+      color: black;
+      border: none;
+      font-size: 1.5rem;
+    }
+
+    .tl-header {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-start;
     }
 
     h1 {
@@ -445,6 +496,7 @@
     }
 
     .content {
+      flex: 1;
       padding: 30px;
     }
 
@@ -559,7 +611,9 @@
     .tlcontainer {
       display: flex;
       height: 100vh;
-      overflow: hidden;
+
+      width: 100%;
+      /*overflow: hidden;*/
     }
 
     .tline {
@@ -570,12 +624,12 @@
       padding: 20px;
     }
 
-    .tlpanel {
-      width: 50%;
-      background: #fff;
-      border-left: 1px solid #ccc;
+    .tline.expanded {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      overflow-y: scroll;
       padding: 20px;
-      overflow-y: auto;
     }
 
     .clickable {
@@ -729,9 +783,18 @@
       </div>
     </div>
     <div id="tl" class="tab-content active">
-      <div class="tlcontainer">
+      <div class="tlcontainer" id="tlContainer">
         <div class="tline" id="tline">
+          <div class="tl-header" id="tl-header">
+            <button class="tltoggle-btn" id="tltoggleBtn">
+              <img id="tltoggleIcon" src="icons/extend_black.svg" alt="Menu" width="24" height="24">
+            </button>
+          </div>
           <h1>2025</h1>
+          <h3>
+            <img src="icons/trip.svg" class="small-icon">
+            <span class="clickable" data-template-id="mod">Marktoberdorf Summer School</span>
+          </h3>
           <h2>Publications</h2>
           <h3>
             <img src="icons/paper.svg" class="small-icon"><img src="icons/artifact.svg" class="small-icon"><img
@@ -741,12 +804,11 @@
           </h3>
           <p class="indented">26th International Conference on Formal Engineering Methods (ICFEM), in Hangzhou, China
           </p>
-          <h2>Other Activities</h2>
+          <h2></h2>
 
 
 
           <h1>2024</h1>
-          <h2>Workshops, Summer Schools, and Visits</h2>
           <h3>
             <img src="icons/trip.svg" class="small-icon">
             <span class="clickable" data-template-id="dagstuhl">Workshop at Schloss Dagstuhl</span>
@@ -873,63 +935,39 @@
       <script src="https://bibbase.org/show?bib=https://julianklein-cv.github.io/cv/lib.bib&jsonp=1"></script>
     </div>
 
-    <div id="visits" class="tab-content">
-      <h1>Workshops and Visits</h1>
 
-      <h2>Workshop at Schloss Dagstuhl</h2>
-      <img src="icons/location_b.svg" class="small-icon">
-      <span>Dagstuhl, Germany - October 2024</span><br>
-      <p>
-        I participated in the
-        <a href="https://www.dagstuhl.de/en/seminars/seminar-calendar/seminar-details/24443" class="text-link">
-          <span>research methods in software engineering training</span>
-        </a>
-        2024 at Schloss Dagstuhl.
-        The training consisted of several invited lectures on different topics, related to research methods on software
-        engineering.
-        We discussed the topics of the lectures (and many related topics) in breakout groups.
-      </p>
-
-      <h2>Visit at University of Cagliari</h2>
-      <img src="icons/location_b.svg" class="small-icon">
-      <span>Cagliary, Italy - September 2024</span><br>
-      <p>
-        I started my first international collaboration with
-        <a href="https://scholar.google.com/citations?user=UAHzXXMAAAAJ&hl=en" class="text-link">
-          <span>Kuize Zhang</span>
-        </a>
-        in 2024.
-        At the time, he was working at the university of Cagliari as part of the
-        <a href="http://dipartimenti.unica.it/ingegneriaelettricaedelettronica/research/research-groups/systems-and-control/?lang=en"
-          class="text-link">
-          <span>Automatic Control </span>
-        </a>
-        group.
-        I visited the group to meet in person and accelerate the progress on our collaborative work.
-        I also gave a presentation about my research at the Autolab seminar of the Automatic Control group.
-      </p>
-    </div>
   </div>
 
   <script>
 
     const toggleBtn = document.getElementById('toggleBtn');
     const sidePanel = document.getElementById('sidePanel');
+    const panel = document.getElementById("tlpanel");
+    const tlcont = document.getElementById("tlcontainer");
+
+
+    tltoggleBtn.addEventListener('click', () => {
+      tlpanel.classList.toggle('collapsed');
+      document.querySelector('.tline').classList.toggle('expanded');
+
+      if (tlpanel.classList.contains('collapsed')) {
+        tltoggleIcon.src = "icons/collapse_black.svg";
+      } else {
+        tltoggleIcon.src = "icons/extend_black.svg";
+      }
+    });
 
     toggleBtn.addEventListener('click', () => {
       sidePanel.classList.toggle('collapsed');
 
 
       if (sidePanel.classList.contains('collapsed')) {
-        toggleIcon.src = "icons/extend.svg";
-        toggleIcon.alt = "Menu";
-      } else {
         toggleIcon.src = "icons/collapse.svg";
-        toggleIcon.alt = "Close";
+      } else {
+        toggleIcon.src = "icons/extend.svg";
       }
     });
 
-    const panel = document.getElementById("tlpanel");
     const clickableElements = document.querySelectorAll(".clickable");
 
     clickableElements.forEach(el => {
