@@ -972,6 +972,11 @@
 
     clickableElements.forEach(el => {
       el.addEventListener("click", () => {
+        if (tlpanel.classList.contains('collapsed')) {
+          tlpanel.classList.toggle('collapsed');
+          document.querySelector('.tline').classList.toggle('expanded');
+          tltoggleIcon.src = "icons/extend_black.svg";
+        }
         const templateId = el.getAttribute("data-template-id");
         const template = document.getElementById(templateId);
 
