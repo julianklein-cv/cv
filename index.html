@@ -297,6 +297,31 @@
       padding: 2rem 1rem;
       text-align: center;
       flex-shrink: 0;
+      transition: width 0.0s ease;
+      overflow: hidden;
+    }
+
+    .side-panel .panel-content {
+      transition: opacity 0.0s ease, transform 0.0s ease;
+    }
+
+    .side-panel.collapsed {
+      width: 0;
+      padding: 0;
+    }
+
+    .side-panel.collapsed .panel-content {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+
+
+    .toggle-btn {
+      cursor: pointer;
+      background: transparent;
+      color: white;
+      border: none;
+      font-size: 1.5rem;
     }
 
     h1 {
@@ -334,7 +359,6 @@
       padding-left: 1.5rem;
     }
 
-    /* Main content wrapper */
     .main {
       flex-grow: 1;
       display: flex;
@@ -343,7 +367,6 @@
       font-size: large;
     }
 
-    /* Top nav */
     .top-nav {
       background-color: rgb(30, 30, 30);
       display: flex;
@@ -351,6 +374,29 @@
       align-items: center;
       padding: 20px 40px;
       flex-wrap: wrap;
+    }
+
+    .nav-left {
+      flex: 1;
+      /* reserve space on left */
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    .nav-center {
+      flex: 1;
+      /* reserve center space */
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      /* spacing between buttons */
+    }
+
+    .nav-right {
+      flex: 1;
+      /* reserve right side space */
+      display: flex;
+      justify-content: flex-end;
     }
 
     .nav-button {
@@ -608,7 +654,8 @@
 
 
 <body>
-  <div class="side-panel">
+  <div class="side-panel" id="sidePanel">
+    <div class="panel-content"></div>
     <img src="image.jpg" alt="Picture" class="sidebarimage">
     <h2>Julian Klein</h2>
     <p>
@@ -660,13 +707,26 @@
       </a>
     </p>
   </div>
+  </div>
 
   <div class="main">
 
     <div class="top-nav">
-      <button class="nav-button" onclick="showTab('tl')"><span>Time Line</span></button>
-      <button class="nav-button" onclick="showTab('cv')"><span>Curriculum Vitae</span></button>
-      <button class="nav-button" onclick="showTab('publications')"><span>Publications</span></button>
+      <div class="nav-left">
+        <button class="toggle-btn" id="toggleBtn">
+          <img id="toggleIcon" src="icons/collapse.svg" alt="Menu" width="24" height="24">
+        </button>
+      </div>
+
+      <div class="nav-center">
+        <button class="nav-button" onclick="showTab('tl')"><span>Time Line</span></button>
+        <button class="nav-button" onclick="showTab('cv')"><span>Curriculum Vitae</span></button>
+        <button class="nav-button" onclick="showTab('publications')"><span>Publications</span></button>
+      </div>
+
+      <div class="nav-right">
+        <!-- optional things like profile, search, etc. -->
+      </div>
     </div>
     <div id="tl" class="tab-content active">
       <div class="tlcontainer">
@@ -852,6 +912,22 @@
   </div>
 
   <script>
+
+    const toggleBtn = document.getElementById('toggleBtn');
+    const sidePanel = document.getElementById('sidePanel');
+
+    toggleBtn.addEventListener('click', () => {
+      sidePanel.classList.toggle('collapsed');
+
+
+      if (sidePanel.classList.contains('collapsed')) {
+        toggleIcon.src = "icons/extend.svg";
+        toggleIcon.alt = "Menu";
+      } else {
+        toggleIcon.src = "icons/collapse.svg";
+        toggleIcon.alt = "Close";
+      }
+    });
 
     const panel = document.getElementById("tlpanel");
     const clickableElements = document.querySelectorAll(".clickable");
