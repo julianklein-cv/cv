@@ -211,10 +211,25 @@
       <span>Marktoberdorf Summer School</span>
     </a>
     2025.
-
+    It was one of the 'theoretical editions' of the summer school with the topic specification and verification for secure cyberspace.
+    The summer school was organized by Jasmin Blanchette and Laura Kovács.
   </p>
   <img src="timeline/2025/mod.jpg" style="margin-top: 40px; max-width: 50%; height: auto;">
   <p>The Internat of the Marktoberdorf Gymnasium.</p>
+</template>
+
+<template id="nfdixcs">
+  <h2>Marktoberdorf Summer School</h2>
+  <p><img src="icons/location_g.svg" class="small-icon">Freiberg, Germany</p>
+  <p><img src="icons/date.svg" class="small-icon">October 2025</p>
+  <p>
+    I participated in the NFDIxCS summer school 2025.
+    This was the first edition of the summer school and it was focused on open science and reproducible research.
+    We learned a lot about research artifacts and software licensing.
+    We also visited the mine 'Reiche Zeche' and tasted the delicious local whiskey!
+  </p>
+  <img src="timeline/2025/nfdixcs.jpg" style="margin-top: 40px; max-width: 50%; height: auto;">
+  <p>The entrance to the mine Reiche Zeche in Freiberg, Germany.</p>
 </template>
 
 <template id="dagstuhl">
@@ -793,6 +808,10 @@
           <h1>2025</h1>
           <h3>
             <img src="icons/trip.svg" class="small-icon">
+            <span class="clickable" data-template-id="nfdixcs">NFDIxCS Summer School</span>
+          </h3>
+          <h3>
+            <img src="icons/trip.svg" class="small-icon">
             <span class="clickable" data-template-id="mod">Marktoberdorf Summer School</span>
           </h3>
           <h2>Publications</h2>
@@ -962,9 +981,9 @@
 
 
       if (sidePanel.classList.contains('collapsed')) {
-        toggleIcon.src = "icons/collapse.svg";
-      } else {
         toggleIcon.src = "icons/extend.svg";
+      } else {
+        toggleIcon.src = "icons/collapse.svg";
       }
     });
 
