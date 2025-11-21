@@ -1,211 +1,395 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Julian Klein's Webpage</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background-color: white;
+      color: rgb(50, 50, 50);
+    }
 
-<template id="icfem25">
-  <h2>A Unified Method to Efficiently Verify Opacity of Discrete-Timed Automata</h2>
+    .page-content {
+      margin: 15px auto;
+      padding: 10px 15px 15px;
+    }
+
+    .page-content h2 {
+      border-top: 2px solid #b8b8b8;
+      padding-top: 64px;
+      margin-top: 64px;
+      font-size: 2rem;
+    }
+
+    .page-content h3 {
+      display: inline-block;
+      padding: 2px 2px;
+      margin-top: 8px;
+      margin-bottom: 2px;
+      background-color: transparent;
+      font-size: 1.4rem;
+    }
+
+    .page-content h2:first-of-type {
+        border-top: none;
+        padding-top: 0;
+        margin-top: 0;
+    }
+
+    a:link {
+      color: rgb(101, 203, 221);
+      background-color: transparent;
+      text-decoration: none;
+    }
+
+    a:visited {
+      color: rgb(101, 203, 221);
+      background-color: transparent;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: rgb(0, 162, 190);
+      background-color: transparent;
+      text-decoration: underline;
+    }
+
+    a:active {
+      color: rgb(0, 162, 190);
+      background-color: transparent;
+      text-decoration: underline;
+    }
+
+    .ha:link {
+      color: rgb(244, 229, 160);
+      background-color: transparent;
+      text-decoration: none;
+    }
+
+    .ha:visited {
+      color: rgb(244, 229, 160);
+      background-color: transparent;
+      text-decoration: none;
+    }
+
+    .ha:hover {
+      color: rgb(233, 197, 36);
+      background-color: transparent;
+      text-decoration: underline;
+    }
+
+    .ha:active {
+      color: rgb(233, 197, 36);
+      background-color: transparent;
+      text-decoration: underline;
+    }
+
+    .head-container {
+      display: flex;
+      align-items: flex-start;
+      gap: 24px;
+      padding: 24px;
+      background-color: rgb(56, 56, 56);
+    }
+
+    .img-fluid {
+      max-width: 25%;
+      min-width: 180px;
+      height: auto;
+      border-radius: 4px;
+      flex: 0 0 auto;
+    }
+
+    .head-text {
+      flex: 1;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      min-width: 260px;
+    }
+
+    h1, h2 {
+      margin: 0 0 16px 0px;
+    }
+
+    p {
+      margin: 0 0 12px 0;
+    }
+
+    nav a.ha {
+      display: inline-block;
+      margin: 2px 0;
+    }
+
+    .icon {
+      width: 20px;
+      height: 20px;
+      vertical-align: middle;
+      margin-right: 6px;
+    }
+
+    p span {
+      vertical-align: middle;
+    }
+
+    .head-container p {
+      text-align: left;
+      color: rgb(238, 238, 238);
+    }
+
+    .head-container h1 {
+      color: rgb(238, 238, 238);
+    }
+
+    .head-container h2 {
+      color: rgb(238, 238, 238);
+    }
+
+    @media (max-width: 700px) {
+      .head-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .img-fluid {
+        max-width: 60%;
+        min-width: 0;
+        margin-bottom: 16px;
+      }
+
+      .head-text {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+
+
+
+
+
+<body>
+  <div class="head-container">
+    <img class="img-fluid" src="image.jpg" alt="Profile picture" />
+
+    <div class="head-text">
+      <hgroup>
+        <h1>Julian Klein</h1>
+        <p>
+          <img src="icons/mail.svg" alt="Icon" class="icon"><span>Personal mail: jbh.klein@gmail.com</span><br />
+          <img src="icons/mail.svg" alt="Icon" class="icon"><span>Institutional mail: j.klein@tu-berlin.de</span><br />
+          <img src="icons/university.svg" alt="Icon" class="icon"><span>Institution: Technical University Berlin</span><br />
+          <img src="icons/location.svg" alt="Icon" class="icon"><span>Location: Berlin, Germany</span><br />
+          <img src="icons/orcid.svg" alt="Icon" class="icon"><span>ORCID: 0009-0005-2899-3934</span><br />
+        </p>
+        <h2>Content</h2>
+        <nav>
+          <a href="#aboutme" class="ha">About Me</a> <br />
+          <a href="#visits" class="ha">Research Visits</a> <br />
+          <a href="#conferences" class="ha">Conferences</a> <br />
+          <a href="#education" class="ha">Education</a> <br />
+          <a href="#summerschools" class="ha">Summer Schools</a> <br />
+          <a href="#reviews" class="ha">Reviewing Activities</a> <br />
+        </nav>
+      </hgroup>
+
+      <hgroup>
+        <h2>Links</h2>
+        <p>
+          <img src="icons/scholar.svg" alt="Icon" class="icon">
+          <span><a href="https://scholar.google.com/citations?user=Uv28q84AAAAJ&hl=de&oi=sra" class="ha">Google Scholar</a></span><br />
+          <img src="icons/dblp.svg" alt="Icon" class="icon">
+          <span><a href="https://dblp.org/pid/03/9150-1.html" class="ha">DBLP</a></span><br />
+          <img src="icons/researchgate.svg" alt="Icon" class="icon">
+          <span><a href="https://www.researchgate.net/profile/Julian-Klein-11" class="ha">ResearchGate</a></span><br />
+          <img src="icons/gitlab.svg" alt="Icon" class="icon">
+          <span><a href="https://gitlab.com/julianklein/" class="ha">GitLab</a></span><br />
+          <img src="icons/orcid.svg" alt="Icon" class="icon">
+          <span><a href="https://orcid.org/my-orcid?orcid=0009-0005-2899-3934" class="ha">ORCID</a></span><br />
+          <img src="icons/linkedin.svg" alt="Icon" class="icon">
+          <span><a href="https://de.linkedin.com/in/julian-klein-407967336" class="ha">LinkedIn</a></span><br />
+        </p>
+
+        <h2>Publications</h2>
+        <nav>
+          <a href="#confpapers" class="ha">Conference Papers</a> <br />
+          <a href="#software" class="ha">Software</a> <br />
+          <a href="#posters" class="ha">Posters</a> <br />
+        </nav>
+      </hgroup>
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <main class="page-content">
+
+  <h2 id="aboutme">About Me</h2>
   <p>
-    Building on our definition of threshold estimators and the concurrent composition by Zhang and Giua, we define the
-    timed concurrent composition (TCC) as a verification structure to verify several timed opacity notions on
-    discrete-timed automata.
-    This is thus another continuation on prevoius works on the verification of opacity in discrete-timed automata.
-    Moreover, this was my first international collaboration with Kuize Zhang.
-  </p>
-  <h3>Abstract</h3>
-  <p>Opacity is a powerful confidentiality property which guarantees that secret information of a system cannot be
-    inferred from its observable behavior. To account for timing attacks, opacity has been extended to continuous-time
-    systems, but the verification problem was proven to be generally undecidable. As a result, multiple recent works
-    study the opacity verification problem of discrete-timed automata. The advantage of a discrete time setting is that
-    it can discretize any timed automaton as a discrete-state system, where opacity can be verified. However, such
-    verification methods usually rely on separating time steps into distinct hybrid states. This results in state
-    explosion and limited scalability for real-world problems.
-    In this paper, we present a new, more efficient verification method for opacity in a discrete time setting that
-    avoids the state explosion problem. Our verification method groups multiple time steps to intervals, instead of
-    evaluating each time step individually. We define four timed opacity notions and show that our method is capable of
-    verifying all of them in a unified manner. We analyze the efficiency of our method on a case study of a wireless
-    sensor network and randomized systems.</p>
-  <h3>Link</h3>
-  <p>
-    <img src="icons/paper.svg" class="small-icon"><a href="TODO" class="text-link">
-      <span>TODO</span>
+    I am a PhD student at the
+    <a href="https://www.tu.berlin/sese">
+      <span>software and embedded systems engineering (SESE) group</span>
     </a>
+    of the
+    <a href="https://www.tu.berlin/en/eecs/institutions/institutes/institute-of-software-engineering-and-theoretical-computer-science">
+      <span>institute of software engineering and theoretical computer science</span>
+    </a>
+    at TU Berlin with 
+    <a href="https://www.tu.berlin/sese/ueber-uns/leitung">
+      <span>Sabine Glesner</span>
+    </a> 
+    as my supervisor.
+    My research considers the verification of confidentiality properties of real-time systems.
+    In particular, I develop methods to automatically guarantee that a given system cannot leak secret information to a malicious intruder who observes the system.
+    As a formal notion of confidentiality, I use the powerful opacity framework.
+    Opacity holds if an observer cannot derive secret information from any observation that can be produced by the given system.
+    Timed systems are hard to verify by design and the verification problem of timed opacity is generally undecidable.
+    I therefore consider restricted time semantics to make the problem tractable.
+    Besides my work as a researcher, I am also a teaching assistant. 
+    This includes supervision of theses, project work with small groups of students, and a large
+    undergraduate courses with over 700 students.
   </p>
-  <h2>Artifact</h2>
+  
+
+
+
+
+  <h2 id="visits">Research Visits</h2>
+
   <p>
-    We provide a software prototype as an artifact.
-    All presented results in the paper can be reproduced using our artifact.
-    The artifact was not evaluated as there was no artifact evaluation at ICFEM 2025.
+    <h3>School of Mathematics and Statistics, Xi'an Jiaotong University</h3><br />
+    <img src="icons/location_g.svg" class="icon">Xi'an, China 🇨🇳<br />
+    <img src="icons/date.svg" class="icon">November 2025<br />
+    <p>
+      As a continuation of our previous work, I visited 
+      <a href="https://scholar.google.com/citations?user=UAHzXXMAAAAJ&hl=en" class="text-link">
+        <span>Kuize Zhang</span>
+      </a>
+      at the 
+      <a href="https://en.xjtu.edu.cn/" class="text-link">
+        <span>Xi'an Jiaotong University</span>
+      </a>
+      in November 2025, where he is now a full professor at the 
+      <a href="https://math.xjtu.edu.cn/info/1155/10260.htm" class="text-link">
+        <span>School of Mathematics and Statistics</span>
+      </a>
+      .
+      The goal of the visit was to plan further future projects between his department and our group at TU Berlin.
+      As a result, we started writing first drafts of project proposals.
+      Besides the planning, we of course also discussed possible future directions for our joint work in particular.
+    </p>
   </p>
-  <h3>Link</h3>
+
   <p>
-    <img src="icons/artifact.svg" class="small-icon"><a href="https://doi.org/10.5281/zenodo.15237829"
+    <h3>Automatic Control Group, University of Cagliary </h3> <br />
+    <img src="icons/location_g.svg" class="icon">Cagliary, Italy 🇮🇹<br />
+    <img src="icons/date.svg" class="icon">September 2024<br />
+    <p>
+      I started my first international collaboration with
+      <a href="https://scholar.google.com/citations?user=UAHzXXMAAAAJ&hl=en" class="text-link">
+        <span>Kuize Zhang</span>
+      </a>
+      in 2024.
+      At the time, he was working at the university of Cagliari as part of the
+      <a href="http://dipartimenti.unica.it/ingegneriaelettricaedelettronica/research/research-groups/systems-and-control/?lang=en"
+        class="text-link">
+        <span>Automatic Control </span>
+      </a>
+      group.
+      I visited the group to meet in person and accelerate the progress on our collaborative work.
+      I also gave a presentation about my research at the Autolab seminar of the Automatic Control group.
+    </p>
+  </p>
+
+
+  <h2 id="conferences">Attended Conferences</h2>
+
+  <p>
+    <h3>26th International Conference on Formal Engineering Methods (ICFEM 2025)</h3> <br />
+    <img src="icons/location_g.svg" class="icon">Hangzhou, China 🇨🇳<br />
+    <img src="icons/date.svg" class="icon">10 - 13 November 2025<br />
+    <img src="icons/website.svg" class="icon"> 
+    <a href="https://icfem2025.github.io/"
       class="text-link">
-      <span>https://doi.org/10.5281/zenodo.15237829</span>
+      Website
     </a>
-  </p>
-  <h2>Slides</h2>
-  <p>I presented our paper <strong>A Unified Method to Efficiently Verify Opacity of Discrete-Timed Automata</strong> at
-    the 2025 26th International Conference on Formal Engineering Methods (ICFEM) on <strong>TODO</strong> in Hangzhou,
-    China.</p>
-  <img src="icons/slides.svg" class="small-icon"><a href="timeline/2025/icfem25_slides.pdf" class="text-link"
-    download="document.pdf">Download Slides</a>
-</template>
-
-
-
-
-
-
-
-<template id="icfem24">
-  <h2>Efficient State Estimation of Discrete-Timed Automata</h2>
-  <p>
-    A continuation of our work on the verification of current-state opacity (CSO) on discrete timed automata.
-    We develop a new verification structure, called threshold estimator (TE).
-    We show that CSO can be efficiently verified using TE on several case studies.
-    The paper was published in the proceedings of the 2024 25th International Conference on Formal Engineering Methods
-    (ICFEM).
-  </p>
-  <h3>Abstract</h3>
-  <p>State estimation is a fundamental method in control theory that has applications in privacy, fault diagnosis, and
-    the verification of other state inference properties. State estimation methods for timed automata rely on
-    discretizing time into atomic steps. These discrete time steps are enumerated in separate states, significantly
-    limiting scalability for large, realistic systems. In this paper, we propose a more efficient state estimation
-    method for discrete-timed automata. The key idea of our approach is to avoid the enumeration of single time steps
-    when possible. We provide a formal definition of a new state estimator model and an efficient algorithmic approach
-    to derive it from discrete-timed automata. We validate our method on 11 realistic case studies and show a
-    significant decrease in computational costs.</p>
-  <h3>Link</h3>
-  <p>
-    <img src="icons/paper.svg" class="small-icon"><a href="https://doi.org/10.1007/978-981-96-0617-7_6"
+    <img src="icons/paper.svg" class="icon"> 
+    <a href="https://doi.org/10.1007/978-981-95-4213-0_16"
       class="text-link">
-      <span>https://doi.org/10.1007/978-981-96-0617-7_6</span>
+      Paper
+    </a>
+    <img src="icons/slides.svg" class="icon"> 
+    <a href="timeline/2025/icfem25_slides.pdf"
+      class="text-link" download>
+      Slides
     </a>
   </p>
-  <h2>Artifact</h2>
+
   <p>
-    We provide a software prototype and all case studies in our artifact.
-    All presented results in the paper can be reproduced using our artifact.
-    The artifact was not evaluated as there was no artifact evaluation at ICFEM 2024.
-  </p>
-  <h3>Link</h3>
-  <p>
-    <img src="icons/artifact.svg" class="small-icon"><a href="https://gitlab.com/julianklein/threshold-estimation"
+    <h3>25th International Conference on Formal Engineering Methods (ICFEM 2024)</h3> <br />
+    <img src="icons/location_g.svg" class="icon">Hiroshima, Japan 🇯🇵<br />
+    <img src="icons/date.svg" class="icon">2 - 6 December 2024<br />
+    <img src="icons/website.svg" class="icon"> 
+    <a href="https://icfem2024.info/"
       class="text-link">
-      <span>https://gitlab.com/julianklein/threshold-estimation</span>
+      Website
     </a>
-  </p>
-  <h2>Slides</h2>
-  <p>I presented our paper <strong>Efficient State Estimation of Discrete-Timed Automata</strong> at the 2024 25th
-    International Conference on Formal Engineering Methods (ICFEM) on <strong>December 4, 2024</strong> in Hiroshima,
-    Japan.</p>
-  <img src="icons/slides.svg" class="small-icon"><a href="timeline/2024/icfem24_slides.pdf" class="text-link"
-    download="document.pdf">Download Slides</a>
-</template>
-
-
-
-
-
-
-
-
-
-<template id="formalise24">
-  <h2>Verifying Opacity of Discrete-Timed Automata</h2>
-  <p>
-    We prove that opacity can be verified in discrete-timed automata.
-    To facilitate this, we provide a verification method for current-state opacity (CSO) using tick automata.
-    To make the method more efficient, we develop the local time abstraction, reducing the size of the tick automata.
-    Our paper is the first to report a decidability result on the verification problem of opacity in discrete timed
-    automata.
-    However, two concurrent works by
-    <a href="https://doi.org/10.1007/978-981-96-0617-7_4" class="text-link">
-      <span>André et al.</span>
-    </a>
-    and
-    <a href="https://doi.org/10.1007/978-3-031-71162-6_32" class="text-link">
-      <span>An et al.</span>
-    </a>
-    also prove this decidability later in 2024.
-    Our paper was published in the proceedings of the 2024 IEEE/ACM 12th International Conference on Formal Methods in
-    Software Engineering (FormaliSE).
-  </p>
-  <h3>Abstract</h3>
-  <p>Opacity is a powerful confidentiality property that holds if a system cannot leak secret information through
-    observable behavior. In recent years, time has become an increasingly popular attack vector. The notion of opacity
-    has therefore been extended to timed automata (TA). However, the verification of opacity of TA has been proven to be
-    undecidable for the commonly used dense time model. To make the problem decidable, state of the art approaches
-    consider weaker notions of opacity or heavily restrict the class of considered TA, resulting in unrealistic threat
-    models.
-    In this paper, we address the problem of verifying opacity of TA without restrictions. For this purpose, we consider
-    a discrete time setting. We present a novel algorithm to transform TA to equivalent finite automata (FA) and then
-    use known methods to verify opacity of the resulting FA. To improve the efficiency of our algorithm, we use a novel
-    time abstraction that significantly reduces the state space of the resulting FA, improving the scalability of our
-    approach. We validate our method using randomized systems, as well as four case studies from the literature showing
-    that our approach is applicable in practice.</p>
-  <h3>Link</h3>
-  <p>
-    <img src="icons/paper.svg" class="small-icon"><a href="https://doi.org/10.1145/3644033.3644376" class="text-link">
-      <span>https://doi.org/10.1145/3644033.3644376</span>
-    </a>
-  </p>
-  <h2>Artifact</h2>
-  <p>
-    We provide a software prototype and all case studies in our artifact.
-    All presented results in the paper can be reproduced using our artifact.
-    The artifact was given the available and functional badge by the artifact evaluation committee of FormaliSE 2024.
-  </p>
-  <h3>Link</h3>
-  <p>
-    <img src="icons/artifact.svg" class="small-icon"><a href="https://doi.org/10.6084/m9.figshare.24790842"
+    <img src="icons/paper.svg" class="icon"> 
+    <a href="https://doi.org/10.1007/978-981-96-0617-7_6"
       class="text-link">
-      <span>https://doi.org/10.6084/m9.figshare.24790842</span>
+      Paper
+    </a>
+    <img src="icons/slides.svg" class="icon"> 
+    <a href="timeline/2024/icfem24_slides.pdf"
+      class="text-link" download>
+      Slides
     </a>
   </p>
-  <h2>Slides</h2>
-  <p>I presented our paper <strong>Verifying Opacity of Discrete-Timed Automata</strong> at the 2024 IEEE/ACM 12th
-    International Conference on Formal Methods in Software Engineering (FormaliSE) on <strong>April 14, 2024</strong> in
-    Lisbon, Portugal.</p>
-  <img src="icons/slides.svg" class="small-icon"><a href="timeline/2024/formalise24_slides.pdf" class="text-link"
-    download="document.pdf">Download Slides</a>
-</template>
 
-
-
-
-
-
-
-<template id="fllm24">
-  <h2>A Systematic Study on the Potentials and Limitations of LLM-assisted Software Development</h2>
   <p>
-    I co-authored this paper on LLM-assisted software development.
-    It was joint work with my colleagues and two students who wrote their theses on the topic.
-  </p>
-  <h3>Abstract</h3>
-  <p>In the field of software engineering, Large Language Models like GPT have gained enormous interest in recent times.
-    With its expanding area of application, ChatGPT has become an essential tool for code generation. Several studies
-    have shown that the quality of generated code depends on the underlying dataset and the quality of the provided
-    prompts. However, its precise capabilities and limitations remain uncertain, as does the extent of assistance
-    required for effective code generation. We present the results of our systematic study in which we investigate the
-    potential of ChatGPT, based on GPT-4, in solving assignments of an introductory-level programming class. We examine
-    the impact of programming language choice, different prompting strategies, and the results of the model compared to
-    those of real students. Our results show that ChatGPT cannot solve the assignments independently, but outperforms
-    the average student with human assistance.</p>
-  <h3>Link</h3>
-  <p>
-    <img src="icons/paper.svg" class="small-icon"><a href="https://doi.org/10.1109/FLLM63129.2024.10852455"
+    <h3>12th International Conference on Formal Methods in Software Engineering (FormaliSE 2024)</h3> <br />
+    <img src="icons/location_g.svg" class="icon">Lisbon, Portugal 🇵🇹<br />
+    <img src="icons/date.svg" class="icon">12 - 21 April 2024<br />
+    <img src="icons/website.svg" class="icon"> 
+    <a href="https://conf.researchr.org/home/Formalise-2024"
       class="text-link">
-      <span>https://doi.org/10.1109/FLLM63129.2024.10852455</span>
+      Website
+    </a>
+    <img src="icons/paper.svg" class="icon"> 
+    <a href="https://doi.org/10.1145/3644033.3644376"
+      class="text-link">
+      Paper
+    </a>
+    <img src="icons/slides.svg" class="icon"> 
+    <a href="timeline/2024/formalise24_slides.pdf"
+      class="text-link" download>
+      Slides
     </a>
   </p>
-</template>
 
-<template id="mod">
-  <h2>Marktoberdorf Summer School</h2>
-  <p><img src="icons/location_g.svg" class="small-icon">Marktoberdorf, Germany</p>
-  <p><img src="icons/date.svg" class="small-icon">August 2025</p>
+
+  <h2 id="summerschools">Summer Schools</h2>
   <p>
+    <h3> Summer School on Open Science and Reproducible Research</h3><br />
+    <img src="icons/location_g.svg" class="icon">Freiberg, Germany 🇩🇪<br />
+    <img src="icons/date.svg" class="icon">October 2025<br />
+    I participated in the NFDIxCS summer school 2025.
+    This was the first edition of the summer school and it was focused on open science and reproducible research.
+    We learned a lot about research artifacts and software licensing.
+    We also visited the mine 'Reiche Zeche' and tasted the delicious local whiskey!
+  </p>
+  
+  <p>
+    <h3> Summer School on Verification for Secure Cyberspace</h3><br />
+    <img src="icons/location_g.svg" class="icon">Marktoberdorf, Germany 🇩🇪<br />
+    <img src="icons/date.svg" class="icon">August 2025<br />
     I participated in the
     <a href="https://en.wikipedia.org/wiki/Summer_School_Marktoberdorf" class="text-link">
       <span>Marktoberdorf Summer School</span>
@@ -214,29 +398,11 @@
     It was one of the 'theoretical editions' of the summer school with the topic specification and verification for secure cyberspace.
     The summer school was organized by Jasmin Blanchette and Laura Kovács.
   </p>
-  <img src="timeline/2025/mod.jpg" style="margin-top: 40px; max-width: 50%; height: auto;">
-  <p>The Internat of the Marktoberdorf Gymnasium.</p>
-</template>
-
-<template id="nfdixcs">
-  <h2>NFDIxCS Summer School</h2>
-  <p><img src="icons/location_g.svg" class="small-icon">Freiberg, Germany</p>
-  <p><img src="icons/date.svg" class="small-icon">October 2025</p>
+  
   <p>
-    I participated in the NFDIxCS summer school 2025.
-    This was the first edition of the summer school and it was focused on open science and reproducible research.
-    We learned a lot about research artifacts and software licensing.
-    We also visited the mine 'Reiche Zeche' and tasted the delicious local whiskey!
-  </p>
-  <img src="timeline/2025/nfdixcs.jpg" style="margin-top: 40px; max-width: 50%; height: auto;">
-  <p>The entrance to the mine Reiche Zeche in Freiberg, Germany.</p>
-</template>
-
-<template id="dagstuhl">
-  <h2>Workshop at Schloss Dagstuhl</h2>
-  <p><img src="icons/location_g.svg" class="small-icon">Dagstuhl, Germany</p>
-  <p><img src="icons/date.svg" class="small-icon">October 2024</p>
-  <p>
+    <h3> Research Methods in Software Engineering Training</h3><br />
+    <img src="icons/location_g.svg" class="icon">Dagstuhl, Germany 🇩🇪<br />
+    <img src="icons/date.svg" class="icon">October 2024<br />
     I participated in the
     <a href="https://www.dagstuhl.de/en/seminars/seminar-calendar/seminar-details/24443" class="text-link">
       <span>research methods in software engineering training</span>
@@ -246,36 +412,231 @@
     engineering.
     We discussed the topics of the lectures (and many related topics) in breakout groups.
   </p>
-  <img src="timeline/2024/dagstuhl.jpg" style="margin-top: 40px; max-width: 50%; height: auto;">
-  <p>View from a window of Schloss Dagstuhl.</p>
-</template>
+  
 
-<template id="cagliari">
-  <h2>Visit at University of Cagliari</h2>
-  <p><img src="icons/location_g.svg" class="small-icon">Cagliari, Italy</p>
-  <p><img src="icons/date.svg" class="small-icon">September 2024</p>
+
+
+
+    
+  <h2 id="reviews">Reviewing Activities</h2>
   <p>
-    I started my first international collaboration with
-    <a href="https://scholar.google.com/citations?user=UAHzXXMAAAAJ&hl=en" class="text-link">
-      <span>Kuize Zhang</span>
-    </a>
-    in 2024.
-    At the time, he was working at the university of Cagliari as part of the
-    <a href="http://dipartimenti.unica.it/ingegneriaelettricaedelettronica/research/research-groups/systems-and-control/?lang=en"
-      class="text-link">
-      <span>Automatic Control </span>
-    </a>
-    group.
-    I visited the group to meet in person and accelerate the progress on our collaborative work.
-    I also gave a presentation about my research at the Autolab seminar of the Automatic Control group.
+    <h3>Conferences</h3><br />
+    <ul>
+      <li>Design Automation and Test in Europe Conference (DATE 2024)</li>
+      <li>Euromicro Conference on Software Engineering and Advanced Applications (SEAA 2026)</li>
+    </ul> 
   </p>
-  <img src="timeline/2024/cagliari.jpg" style="margin-top: 40px; max-width: 50%; height: auto;">
-  <p>View on Cagliari near the university of Cagliari.</p>
-</template>
+  <p>
+    <h3>Journals</h3><br />
+    <ul>
+      <li>Logical Methods in Computer Sciencey (LMCS)</li>
+      <li>Journal on Reliability Engineering & System Safety (JRESS)</li>
+    </ul> 
+  </p>
+
+
+
+
+
+  <h2 id="education">Education</h2>
+  <p>
+    <h3>PhD</h3>(In Progress)<br />
+    <img src="icons/location_g.svg" class="icon">TU Berlin, Germany<br />
+    <img src="icons/date.svg" class="icon">Since 2023 <br />
+    <b>Topic:</b> Formal Verification and Enforcement of Confidentiality Properties in Time-Sensitive Systems<br />
+    <b>Supervisor:</b> Prof. Dr. Sabine Glesner <br />
+    <b>Summary:</b> <br />
+    My research considers the verification of confidentiality properties of real-time systems.
+    In particular, I develop methods to automatically guarantee that a given system cannot leak secret information to a malicious intruder who observes the system.
+    As a formal notion of confidentiality, I use the opacity framework.
+    Opacity holds if an observer cannot derive secret information from any observation that can be produced by the given system.
+    Timed systems are hard to verify by design, and the verification problem of timed opacity is generally undecidable.
+    I therefore consider restricted time semantics to make the problem more tractable.
+    My goal with my research is to prove the real-world applicability of the opacity framework for verification of real-time systems.
+    Related works currently only consider settings that massively restrict the real-world applicability.
+    Moreover, most of these works are purely theoretical.
+    The goal of my PhD is to produce the first software prototype that can actually be used to verify and enforce full timed opacity of a given system.  
+  </p>
+  <p>
+    <h3>Master of Science</h3><br />
+    <img src="icons/location_g.svg" class="icon">TU Berlin, Germany<br />
+    <img src="icons/date.svg" class="icon">2023 <br />
+    <b>Thesis:</b> Verifying and Enforcing Opacity of Timed Automata<br />
+    <b>Examiners:</b> Prof. Dr. Sabine Glesner, Prof. Dr. Stephan Kreutzer <br />
+    <b>Summary:</b> <br />
+    Opacity is a powerful confidentiality property that holds if a system can not leak secret information through observable behavior. 
+    As time has become an increasingly popular attack vector, opacity has been extended to timed systems, modeled as timed automata (TA). 
+    However, opacity verification on TA in a dense time model has been proven to be undecidable. 
+    In this work, we consider timed opacity in a discrete time model. 
+    We prove that opacity of TA can be verified in this setting and provide an algorithmic approach to do so. 
+    Furthermore, we provide an opacity enforcement mechanism, ensuring opacity for unsafe systems. 
+    <br />
+    We present two methods for this purpose.
+    The first method uses tick automata which we derive from the given TA.
+    Tick automata are standard FA that can model discrete time using a special tick-symbol.
+    We prove that a transformation from TA (in the discrete-time model) to tick automata is possible.
+    Moreover, we improve the efficiency of this transformation with a new, local time abstraction.
+    Once the tick automaton is derived, we can use known opacity verification and enforcement methods for FA since tick automata are standard FA.
+    However, this method does not scale well since the verification and enforcement methods scale exponentially with the state space of the tick automaton, which explodes for large input TA.
+    <br />
+    Our second method uses deterministic interval automata (IA) as an estimator model and we adapt the all insertion structure (AIS) by Wu and Lafortune to IA.
+    In a practical evaluation, we have implemented both methods and proved that our second method scales in fact better than our first method.
+    We have evaluated both methods on six case studies and randomized TA.
+    <br />
+    After the thesis was submitted, we published parts of it as a scientific paper at the international conference on formal methods in software engineering (FormaliSE) 2024.
+    The software prototype of our evaluation was published as an open source research artifact and was evaluated by the artifact evaluation committee.
+    We received the functional and available badges.
+  </p>
+
+  <p>
+    <h3>Bachelor of Science</h3><br />
+    <img src="icons/location_g.svg" class="icon">TU Berlin, Germany<br />
+    <img src="icons/date.svg" class="icon">2020 <br />
+    <b>Thesis:</b> Improving Confidentiality Enforcement through Symbolic Information Flow Analysis <br />
+    <b>Examiners:</b> Prof. Dr. Sabine Glesner, Prof. Dr. Florian Tschorsch <br />
+    <b>Summary:</b> <br />
+    The goal of my bachelor thesis was to develop a better data flow analysis on low level code for the PhD project of my supervisor
+    <a href="https://scholar.google.com/citations?user=r3lijwMAAAAJ&hl=de&oi=sra" class="text-link">
+      Tobias Pfeffer
+    </a>.
+    His research goal was to build a fully automatic enforcement method for non-interference on binaries.
+    For this purpose, he was using secure multi execution (SME), which executes the original program multiple times.
+    The idea is to execute the program once for each security level of the input channels.
+    This way, non-interference holds by design, since inputs of lower security levels do not exist within the same execution.
+    The tradeoff is the cost of the additional execution time.
+    To tackle this problem, Tobias proposed the demand-driven secure multi execution (DDSME) method that does not execute the whole program several times, but only critical sections of it.
+    A critical section is part of the program, where interference might happen.
+    To determine over approximations the critical sections, analysis of the control flow graph is sufficient.
+    However, tighter critical sections can be found by more sophisticated methods.
+    In my thesis, I developed a data-flow sensitive code analysis that was able to provide tighter critical sections than the previous control flow-based method.
+    We thereby managed to reduce the overall runtime of the DDSME method.
+  </p>
+  
+
+
+
+  
+
+
+
+
+
+
+   
+
+
+
+
 
 
 
 
+  <h2 id="confpapers">Conference Papers</h2>
+
+  <p>
+    <h3>A Unified Method to Efficiently Verify Opacity of Discrete-Timed Automata</h3><br />
+    <img src="icons/authors.svg" class="icon">
+    <a href="https://julianklein-cv.github.io/cv/"class="text-link">Julian Klein</a>,
+    <a href="https://scholar.google.com/citations?user=UAHzXXMAAAAJ&hl=en"class="text-link">Kuize Zhang</a>
+    <a href="https://www.tu.berlin/sese/ueber-uns/leitung"class="text-link">Sabine Glesner</a>
+    <br />
+    <img src="icons/conference.svg" class="icon">26th International Conference on Formal Engineering Methods (ICFEM 2025) <br />
+    <img src="icons/location_g.svg" class="icon">Hangzhou, China 🇨🇳<br />
+    <img src="icons/date.svg" class="icon">November 2025<br />
+    <img src="icons/paper.svg" class="icon"> 
+    <a href="https://doi.org/10.1007/978-981-95-4213-0_16"
+      class="text-link">
+      Paper
+    </a>
+    <img src="icons/slides.svg" class="icon"> 
+    <a href="timeline/2025/icfem25_slides.pdf"
+      class="text-link" download>
+      Slides
+    </a>
+    <img src="icons/website.svg" class="icon"> 
+    <a href="https://icfem2025.github.io/"
+      class="text-link">
+      Website
+    </a>
+  </p>
+
+  <p>
+    <h3>Efficient State Estimation of Discrete-Timed Automata</h3><br />
+    <img src="icons/authors.svg" class="icon">
+    <a href="https://julianklein-cv.github.io/cv/"class="text-link">Julian Klein</a>,
+    Paul Kogel,
+    <a href="https://www.tu.berlin/sese/ueber-uns/leitung"class="text-link">Sabine Glesner</a>
+    <br />
+    <img src="icons/conference.svg" class="icon">25th International Conference on Formal Engineering Methods (ICFEM 2024) <br />
+    <img src="icons/location_g.svg" class="icon">Hiroshima, Japan 🇯🇵<br />
+    <img src="icons/date.svg" class="icon">December 2024<br />
+    <img src="icons/paper.svg" class="icon"> 
+    <a href="https://doi.org/10.1007/978-981-96-0617-7_6"
+      class="text-link">
+      Paper
+    </a>
+    <img src="icons/slides.svg" class="icon"> 
+    <a href="timeline/2024/icfem24_slides.pdf"
+      class="text-link" download>
+      Slides
+    </a>
+    <img src="icons/website.svg" class="icon"> 
+    <a href="https://icfem2024.info/"
+      class="text-link">
+      Website
+    </a>
+  </p>
+
+  <p>
+    <h3>A Systematic Study on the Potentials and Limitations of LLM-assisted Software Development</h3><br />
+    <img src="icons/authors.svg" class="icon">
+    Chiara Michelutti,
+    Jens Eckert,
+    <a href="https://www.tu.berlin/sese/ueber-uns/wms/milko-monecke"class="text-link">Milko Monecke</a>,
+    <a href="https://julianklein-cv.github.io/cv/"class="text-link">Julian Klein</a>,
+    <a href="https://www.tu.berlin/sese/ueber-uns/leitung"class="text-link">Sabine Glesner</a>
+    <br />
+    <img src="icons/conference.svg" class="icon">2nd International Conference on Foundation and Large Language Models (FLLM 2024) <br />
+    <img src="icons/location_g.svg" class="icon">Dubai, United Arab Emirates 🇦🇪<br />
+    <img src="icons/date.svg" class="icon">November 2024<br />
+    <img src="icons/paper.svg" class="icon"> 
+    <a href="https://doi.org/10.1109/FLLM63129.2024.10852455"
+      class="text-link">
+      Paper
+    </a>
+    <img src="icons/website.svg" class="icon"> 
+    <a href="https://fllm-conference.org/2024/"
+      class="text-link">
+      Website
+    </a>
+  </p>
+
+  <p>
+    <h3>Verifying Opacity of Discrete-Timed Automata</h3><br />
+    <img src="icons/authors.svg" class="icon">
+    <a href="https://julianklein-cv.github.io/cv/"class="text-link">Julian Klein</a>,
+    Paul Kogel,
+    <a href="https://www.tu.berlin/sese/ueber-uns/leitung"class="text-link">Sabine Glesner</a>
+    <br />
+    <img src="icons/conference.svg" class="icon">12th International Conference on Formal Methods in Software Engineering (FormaliSE 2024) <br />
+    <img src="icons/location_g.svg" class="icon">Lisbon, Portugal 🇵🇹<br />
+    <img src="icons/date.svg" class="icon">April 2024<br />
+    <img src="icons/paper.svg" class="icon"> 
+    <a href="https://doi.org/10.1145/3644033.3644376"
+      class="text-link">
+      Paper
+    </a>
+    <img src="icons/slides.svg" class="icon"> 
+    <a href="timeline/2024/formalise24_slides.pdf"
+      class="text-link" download>
+      Slides
+    </a>
+    <img src="icons/website.svg" class="icon"> 
+    <a href="https://conf.researchr.org/home/Formalise-2024"
+      class="text-link">
+      Website
+    </a>
+  </p>
 
 
 
@@ -291,743 +652,95 @@
 
 
 
+  <h2 id="software">Software</h2>
 
+  <p>
+    <h3>A Unified Method to Efficiently Verify Opacity of Discrete-Timed Automata (Paper Artifact)</h3> 
+    <br />
+    No artifact evaluation by ICFEM.
+    <br />
+    <img src="icons/authors.svg" class="icon">
+    <a href="https://julianklein-cv.github.io/cv/"class="text-link">Julian Klein</a>
+    <br />
+    <img src="icons/zenodo.svg" class="icon"> 
+    <a href="https://doi.org/10.5281/zenodo.15237829"
+      class="text-link">
+      Artifact
+    </a>
+  </p>
 
+  <p>
+    <h3>Efficient State Estimation of Discrete-Timed Automata (Paper Artifact)</h3> 
+    <br />
+    No artifact evaluation by ICFEM.
+    <br />
+    <img src="icons/authors.svg" class="icon">
+    <a href="https://julianklein-cv.github.io/cv/"class="text-link">Julian Klein</a>
+    <br />
+    <img src="icons/gitlab_b.svg" class="icon"> 
+    <a href="https://gitlab.com/julianklein/threshold-estimation"
+      class="text-link">
+      Artifact
+    </a>
+  </p>
 
+  <p>
+    <h3>Verifying Opacity of Discrete-Timed Automata (Paper Artifact)</h3> 
+    <br />
+    <img src="icons/available.png" class="icon">
+    <img src="icons/functional.png" class="icon">
+    Evaluated at FormaliSE artifact evaluation.
+    <br />
+    <img src="icons/authors.svg" class="icon">
+    <a href="https://julianklein-cv.github.io/cv/"class="text-link">Julian Klein</a>
+    <br />
+    <img src="icons/figshare.svg" class="icon"> 
+    <a href="https://doi.org/10.6084/m9.figshare.24790842.v4"
+      class="text-link">
+      Artifact
+    </a>
+  </p>
 
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Julian Klein-CV</title>
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
 
-    .indented {
-      text-indent: 2em;
-      /* Adjust the indent size */
-    }
 
-    body {
-      font-family: Arial, sans-serif;
-      display: flex;
-      flex-direction: row;
-      min-height: 100vh;
-    }
 
-    .side-panel {
-      width: 350px;
-      background-color: rgb(54, 54, 54);
-      color: rgb(238, 238, 238);
-      padding: 2rem 1rem;
-      text-align: center;
-      flex-shrink: 0;
-      transition: width 0.0s ease;
-      overflow: hidden;
-    }
 
-    .side-panel .panel-content {
-      transition: opacity 0.0s ease, transform 0.0s ease;
-    }
 
-    .side-panel.collapsed {
-      width: 0;
-      padding: 0;
-    }
 
-    .side-panel.collapsed .panel-content {
-      opacity: 0;
-      transform: scale(0.8);
-    }
 
-    .toggle-btn {
-      cursor: pointer;
-      background: transparent;
-      color: white;
-      border: none;
-      font-size: 1.5rem;
-    }
 
-    .tlpanel {
-      width: 50%;
-      background: #fff;
-      border-left: 1px solid #ccc;
-      padding: 20px;
-      overflow-y: auto;
-      transition: width 0.0s ease, padding 0.0s ease, border-left 0.0s ease;
-    }
-
-    .tlpanel.collapsed {
-      width: 0;
-      padding: 0;
-      border-left: none;
-    }
-
-    .tlpanel .panel-content {
-      transition: opacity 0.0s ease, transform 0.0s ease;
-    }
-
-    .tlpanel.collapsed .panel-content {
-      opacity: 0;
-      transform: scale(0.8);
-    }
-
-    .tltoggle-btn {
-      cursor: pointer;
-      background: transparent;
-      color: black;
-      border: none;
-      font-size: 1.5rem;
-    }
-
-    .tl-header {
-      display: flex;
-      justify-content: flex-end;
-      align-items: flex-start;
-    }
-
-    h1 {
-      border-bottom: 3px solid rgb(120, 120, 120);
-      padding-bottom: 1rem;
-      margin-bottom: 2rem;
-      text-align: center;
-      color: rgb(120, 120, 120);
-    }
-
-    .side-panel h2 {
-      border-bottom: 3px solid rgb(120, 120, 120);
-      padding-bottom: 1rem;
-      margin-bottom: 2rem;
-      text-align: center;
-      color: rgb(238, 238, 238);
-    }
-
-    h2 {
-      border-bottom: 2px solid rgb(120, 120, 120);
-      padding-top: 1rem;
-      padding-bottom: 0.3rem;
-      margin-bottom: 1rem;
-      color: rgb(120, 120, 120);
-    }
-
-    h3 {
-      padding-top: 0.8rem;
-      padding-bottom: 0.2rem;
-      margin-bottom: 0.2rem;
-      color: rgb(120, 120, 120);
-    }
-
-    ul {
-      padding-left: 1.5rem;
-    }
-
-    .main {
-      flex-grow: 1;
-      display: flex;
-      flex-direction: column;
-      color: rgb(114, 114, 114);
-      font-size: large;
-    }
-
-    .top-nav {
-      background-color: rgb(30, 30, 30);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 20px 40px;
-      flex-wrap: wrap;
-    }
-
-    .nav-left {
-      flex: 1;
-      /* reserve space on left */
-      display: flex;
-      justify-content: flex-start;
-    }
-
-    .nav-center {
-      flex: 1;
-      /* reserve center space */
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      /* spacing between buttons */
-    }
-
-    .nav-right {
-      flex: 1;
-      /* reserve right side space */
-      display: flex;
-      justify-content: flex-end;
-    }
-
-    .nav-button {
-      position: relative;
-      background: none;
-      border: none;
-      color: rgb(238, 238, 238);
-      margin: 10px 25px;
-      font-size: clamp(18px, 2.5vw, 24px);
-      cursor: pointer;
-      padding: 12px 20px;
-      overflow: hidden;
-      white-space: nowrap;
-    }
-
-    .nav-button:hover {
-      color: white;
-    }
-
-    .nav-button::after,
-    .nav-button span::before,
-    .nav-button span::after {
-      content: '';
-      position: absolute;
-      background: white;
-      transition: all 0.1s ease;
-    }
-
-    .nav-button::after {
-      height: 2px;
-      width: 0%;
-      left: 0%;
-    }
-
-    .nav-button::before {
-      top: 0;
-    }
-
-    .nav-button::after {
-      bottom: 0;
-    }
-
-    .nav-button:hover::before,
-    .nav-button:hover::after {
-      width: 100%;
-    }
-
-    .content {
-      flex: 1;
-      padding: 30px;
-    }
-
-
-    a {
-      text-decoration: none;
-    }
-
-    .white-link {
-      color: rgb(238, 238, 238);
-    }
-
-    .white-link:hover {
-      color: white
-    }
-
-    .text-link {
-      color: rgb(109, 199, 255);
-    }
-
-    .text-link:hover {
-      color: rgb(0, 157, 255);
-    }
-
-    .sidebarimage {
-      width: 230px;
-      height: 230px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 1rem;
-    }
-
-    .side-panel h2 {
-      margin: 0.5rem 0 0.6rem;
-      font-size: 2rem;
-      text-align: center;
-    }
-
-    .side-panel p {
-      margin: 0.5rem 0 0.5rem;
-      font-size: 1rem;
-      text-align: left;
-      color: rgb(238, 238, 238);
-    }
-
-    .main {
-      flex-grow: 1;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .icon {
-      width: 30px;
-      height: 30px;
-      vertical-align: middle;
-      margin-right: 15px;
-    }
-
-    .small-icon {
-      width: 23px;
-      height: 23px;
-      vertical-align: middle;
-      margin-right: 4px;
-    }
-
-    .small-text {
-      font-size: 20px;
-      font-weight: normal;
-    }
-
-
-    .sidebar-link {
-      position: relative;
-      color: rgb(238, 238, 238);
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      transition: color 0.15s ease;
-    }
-
-    .sidebar-link::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: -2px;
-      width: 0%;
-      height: 2px;
-      background-color: white;
-      transition: width 0.15s ease;
-    }
-
-    .sidebar-link:hover::after {
-      width: 100%;
-    }
-
-    .tab-content {
-      opacity: 0;
-      pointer-events: none;
-      position: absolute;
-      width: 98%;
-      top: 15px;
-      left: 1%;
-    }
-
-    .tab-content.active {
-      opacity: 1;
-      transform: translateY(0);
-      pointer-events: auto;
-      position: relative;
-    }
-
-    .tlcontainer {
-      display: flex;
-      height: 100vh;
-
-      width: 100%;
-      /*overflow: hidden;*/
-    }
-
-    .tline {
-      width: 50%;
-      height: 100%;
-      position: relative;
-      overflow-y: scroll;
-      padding: 20px;
-    }
-
-    .tline.expanded {
-      width: 100%;
-      height: 100%;
-      position: relative;
-      overflow-y: scroll;
-      padding: 20px;
-    }
-
-    .clickable {
-      color: rgb(128, 27, 19);
-      cursor: pointer;
-    }
-
-    .timeline {
-      width: 50%;
-      height: 90%;
-      position: relative;
-      overflow-y: scroll;
-      padding: 20px;
-    }
-
-
-    .timeline-container {
-      display: flex;
-      height: 100vh;
-      overflow: hidden;
-    }
-
-    .timeline {
-      position: relative;
-      flex: 1;
-      /*background: #f0f0f0;*/
-      overflow-y: scroll;
-      padding: 20px;
-    }
-
-    .info-panel {
-      width: 50%;
-      background: #fff;
-      border-left: 1px solid #ccc;
-      padding: 20px;
-      overflow-y: auto;
-    }
-
-    .timeline-year {
-      font-weight: bold;
-      margin: 40px 0 10px 0;
-      font-size: 1.2em;
-    }
-
-    .timeline-item {
-      position: absolute;
-      cursor: pointer;
-      transition: transform 0.2s ease;
-    }
-
-    .timeline-item:hover {
-      transform: scale(1.05);
-    }
-
-    .timeline-year-box {
-      /*background: #f0f0f0; /* match timeline background */
-      /*border-left: 2px solid #999;*/
-      border-top: none;
-      /*border-bottom: 2px solid black; /* black line below */
-      margin-bottom: 10px;
-      position: absolute;
-      overflow: visible;
-      padding: 10px;
-      box-sizing: border-box;
-    }
-
-    .timeline-year-label {
-      font-weight: bold;
-      font-size: 2.5em;
-      /* larger font size */
-      color: #333;
-      user-select: none;
-    }
-  </style>
-</head>
-
-
-<body>
-  <div class="side-panel" id="sidePanel">
-    <div class="panel-content"></div>
-    <img src="image.jpg" alt="Picture" class="sidebarimage">
-    <h2>Julian Klein</h2>
-    <p>
-      <img src="icons/location.svg" alt="Icon" class="icon">
-      <span>Berlin, Germany</span>
-    </p>
-    <p>
-      <img src="icons/mail.svg" alt="Icon" class="icon">
-      <span>Mail: j.klein@tu-berlin.de</span>
-    </p>
-    <p>
-      <img src="icons/gmail.svg" alt="Icon" class="icon">
-      <span>GMail: jbh.klein@gmail.com</span>
-    </p>
-    <p>
-      <a href="https://www.tu.berlin/en" class="sidebar-link">
-        <img src="icons/university.svg" alt="Icon" class="icon">
-        <span>Institution: <b>TU Berlin</b></span>
-      </a>
-    </p>
-    <p>
-      <a href="https://orcid.org/my-orcid?orcid=0009-0005-2899-3934" class="sidebar-link">
-        <img src="icons/orcid.svg" alt="Icon" class="icon">
-        <span>ORCID: 0009-0005-2899-3934</span>
-      </a>
-    </p>
-    <p>
-      <a href="https://scholar.google.com/citations?user=Uv28q84AAAAJ&hl=de&oi=sra" class="sidebar-link">
-        <img src="icons/scholar.svg" alt="Icon" class="icon">
-        <span>Google Scholar</span>
-      </a>
-    </p>
-    <p>
-      <a href="https://www.researchgate.net/profile/Julian-Klein-11" class="sidebar-link">
-        <img src="icons/researchgate.svg" alt="Icon" class="icon">
-        <span>ResearchGate</span>
-      </a>
-    </p>
-    <p>
-      <a href="https://gitlab.com/julianklein/" class="sidebar-link">
-        <img src="icons/gitlab.svg" alt="Icon" class="icon">
-        <span>Gitlab</span>
-      </a>
-    </p>
-    <p>
-      <a href="https://dblp.org/pid/03/9150-1.html" class="sidebar-link">
-        <img src="icons/dblp.svg" alt="Icon" class="icon">
-        <span>DBLP</span>
-      </a>
-    </p>
-  </div>
-  </div>
-
-  <div class="main">
-
-    <div class="top-nav">
-      <div class="nav-left">
-        <button class="toggle-btn" id="toggleBtn">
-          <img id="toggleIcon" src="icons/collapse.svg" alt="Menu" width="24" height="24">
-        </button>
-      </div>
-
-      <div class="nav-center">
-        <button class="nav-button" onclick="showTab('tl')"><span>Time Line</span></button>
-        <button class="nav-button" onclick="showTab('cv')"><span>Curriculum Vitae</span></button>
-        <button class="nav-button" onclick="showTab('publications')"><span>Publications</span></button>
-      </div>
-
-      <div class="nav-right">
-        <!-- optional things like profile, search, etc. -->
-      </div>
-    </div>
-    <div id="tl" class="tab-content active">
-      <div class="tlcontainer" id="tlContainer">
-        <div class="tline" id="tline">
-          <div class="tl-header" id="tl-header">
-            <button class="tltoggle-btn" id="tltoggleBtn">
-              <img id="tltoggleIcon" src="icons/extend_black.svg" alt="Menu" width="24" height="24">
-            </button>
-          </div>
-          <h1>2025</h1>
-          <h3>
-            <img src="icons/trip.svg" class="small-icon">
-            <span class="clickable" data-template-id="nfdixcs">NFDIxCS Summer School</span>
-          </h3>
-          <h3>
-            <img src="icons/trip.svg" class="small-icon">
-            <span class="clickable" data-template-id="mod">Marktoberdorf Summer School</span>
-          </h3>
-          <h2>Publications</h2>
-          <h3>
-            <img src="icons/paper.svg" class="small-icon"><img src="icons/artifact.svg" class="small-icon"><img
-              src="icons/slides.svg" class="small-icon">
-            <span class="clickable" data-template-id="icfem25">A Unified Method to Efficiently Verify Opacity of
-              Discrete-Timed Automata</span>
-          </h3>
-          <p class="indented">26th International Conference on Formal Engineering Methods (ICFEM), in Hangzhou, China
-          </p>
-          <h2></h2>
-
-
-
-          <h1>2024</h1>
-          <h3>
-            <img src="icons/trip.svg" class="small-icon">
-            <span class="clickable" data-template-id="dagstuhl">Workshop at Schloss Dagstuhl</span>
-          </h3>
-          <h3>
-            <img src="icons/trip.svg" class="small-icon">
-            <span class="clickable" data-template-id="cagliari">Visit at University of Cagliari</span>
-          </h3>
-
-          <h2>Publications</h2>
-          <h3>
-            <img src="icons/paper.svg" class="small-icon"><img src="icons/artifact.svg" class="small-icon"><img
-              src="icons/slides.svg" class="small-icon">
-            <span class="clickable" data-template-id="icfem24">Efficient State Estimation of Discrete-Timed
-              Automata</span>
-          </h3>
-          <p class="indented">25th International Conference on Formal Engineering Methods (ICFEM), in Hiroshima, Japan
-          </p>
-
-          <h3>
-            <img src="icons/paper.svg" class="small-icon"><img src="icons/artifact.svg" class="small-icon"><img
-              src="icons/slides.svg" class="small-icon">
-            <span class="clickable" data-template-id="formalise24">Verifying Opacity of Discrete-Timed Automata</span>
-          </h3>
-          <p class="indented">12th International Conference on Formal Methods in Software Engineering (FormaliSE), in
-            Lisbon, Portugal
-          </p>
-
-          <h3>
-            <img src="icons/paper.svg" class="small-icon">
-            <span class="clickable" data-template-id="fllm24">A Systematic Study on the Potentials and Limitations of
-              LLM-assisted Software Development</span>
-          </h3>
-          <p class="indented">2nd International Conference on Foundation and Large Language Models (FLLM), Dubai, United
-            Arab Emirates
-          </p>
-        </div>
-        <div class="tlpanel" id="tlpanel">
-          <h2>Click on an item on the left to display more information here.</h2>
-        </div>
-      </div class="tlcontainer">
-    </div>
-    <div id="cv" class="tab-content">
-      <h1>Curriculum Vitae</h1>
-
-      <p>
-        I am a PhD student at the
-        <a href="https://www.tu.berlin/sese" class="text-link">
-          <span>software and embedded systems engineering (SESE) group</span>
-        </a>
-        of the
-        <a href="https://www.tu.berlin/en/eecs/institutions/institutes/institute-of-software-engineering-and-theoretical-computer-science"
-          class="text-link">
-          <span>institute of software engineering and theoretical computer science</span>
-        </a>
-        at TU Berlin.
-        The focus of my research is to guarantee confidentiality properties
-        in time-sensitive systems. Besides my work as a researcher, I am also a teaching assistant. This
-        includes supervision of theses, project work with small groups of students, and a large
-        undergraduate courses with over 700 students.
-      </p>
-
-      <h2>Education</h2>
-      <p>
-        I completed my B.Sc. and M.Sc. degrees in computer science at TU Berlin.
-        Throughout my studies, I found topics in theoretical computer science and especially regarding formal
-        verification most interesting.
-        In both my theses, I worked on formal verification methods of confidentiality properties of timed systems.
-        In particular, as part of my master thesis, I first proved the opacity verification problem for discrete-timed
-        automata to be decidable - a result that has been independently re-established multiple times since.
-        I continue the topic of verification and enforcement of opacity of discrete-timed automata in my research as a
-        PhD student.
-        My goal with my PhD is to develop scalable methods to guarantee timed opacity that can be used on actual
-        real-world applications (see publications for more information).
-      </p>
-
-      <h3>PhD Student<span class="small-text"> (since August 2023)</span></h3>
-      <p><b>Topic:</b> Formal Verification and Enforcement of Confidentiality Properties in Time-Sensitive
-        Systems.</p>
-      <p><b>Supervisor:</b> Prof. Dr. Sabine Glesner</p>
-
-      <h3>Master of Science<span class="small-text"> (2023)</span></h3>
-      <p><b>Thesis:</b> Verifying and Enforcing Opacity of Timed Automata</p>
-      <p><b>Examiners:</b> Prof. Dr. Sabine Glesner, Prof. Dr. Stephan Kreutzer</p>
-
-      <h3>Bachelor of Science<span class="small-text"> (2020)</span></h3>
-      <p><b>Thesis:</b> Improving Confidentiality Enforcement through Symbolic Information Flow Analysis</p>
-      <p><b>Examiners:</b> Prof. Dr. Sabine Glesner, Prof. Dr. Florian Tschorsch</p>
-
-      <h2>Teaching Experience</h2>
-      <p>
-        Besides my studies I worked over four years as a tutor, teaching classes of up to 50 students at a time.
-        This work involved also involved consultation hours and design and grading of homeworks and exams.
-        With the start of my PhD, I also became a teaching assistant with the same teaching tasks and many additional
-        responsibilities.
-        These responsibilities mainly involve the organization and examination of classes.
-        Besides that, I also supervise theses.
-      </p>
-      <ul>
-        <li>Teaching assistant (since August 2023)</li>
-        <li>Tutor (2019-2023)</li>
-      </ul>
-      <h3>Responsibilities</h3>
-      <ul>
-        <li>Online and offline tutorials</li>
-        <li>Consultation hours</li>
-        <li>Exercise design for homeworks and exams</li>
-        <li>Class organization</li>
-        <li>Grading</li>
-        <li>Lectures</li>
-      </ul>
-      <h3>Taught classes</h3>
-      <ul>
-        <li>Software Engineering and Programming Paradigms (Lecture)</li>
-        <li>Software Engineering of Embedded/Cyber-Physical Systems (Lecture)</li>
-        <li>Digital Systems (Lecture)</li>
-        <li>Cyber-Physical Systems (Project)</li>
-        <li>Software and Embedded Systems Engineering (Seminar)</li>
-      </ul>
-    </div>
-
-    <div id="publications" class="tab-content">
-      <h1>Publications</h1>
-      <script src="https://bibbase.org/show?bib=https://julianklein-cv.github.io/cv/lib.bib&jsonp=1"></script>
-    </div>
-
-
-  </div>
-
-  <script>
-
-    const toggleBtn = document.getElementById('toggleBtn');
-    const sidePanel = document.getElementById('sidePanel');
-    const panel = document.getElementById("tlpanel");
-    const tlcont = document.getElementById("tlcontainer");
-
-
-    tltoggleBtn.addEventListener('click', () => {
-      tlpanel.classList.toggle('collapsed');
-      document.querySelector('.tline').classList.toggle('expanded');
-
-      if (tlpanel.classList.contains('collapsed')) {
-        tltoggleIcon.src = "icons/collapse_black.svg";
-      } else {
-        tltoggleIcon.src = "icons/extend_black.svg";
-      }
-    });
-
-    toggleBtn.addEventListener('click', () => {
-      sidePanel.classList.toggle('collapsed');
-
-
-      if (sidePanel.classList.contains('collapsed')) {
-        toggleIcon.src = "icons/extend.svg";
-      } else {
-        toggleIcon.src = "icons/collapse.svg";
-      }
-    });
-
-    const clickableElements = document.querySelectorAll(".clickable");
-
-    clickableElements.forEach(el => {
-      el.addEventListener("click", () => {
-        if (tlpanel.classList.contains('collapsed')) {
-          tlpanel.classList.toggle('collapsed');
-          document.querySelector('.tline').classList.toggle('expanded');
-          tltoggleIcon.src = "icons/extend_black.svg";
-        }
-        const templateId = el.getAttribute("data-template-id");
-        const template = document.getElementById(templateId);
-
-        if (template) {
-          const clone = template.content.cloneNode(true);
-          panel.innerHTML = ""; // Clear previous content
-          panel.appendChild(clone);
-        } else {
-          panel.innerHTML = "<p>Template not found.</p>";
-        }
-      });
-    });
-
-
-
-
-
-
-    function showTab(tabId) {
-      // Hide all tabs
-      document.querySelectorAll('.tab-content').forEach(tab => {
-        tab.classList.remove('active');
-      });
-
-      // Show the selected tab
-      const activeTab = document.getElementById(tabId);
-      if (activeTab) {
-        activeTab.classList.add('active');
-      }
-    }
-  </script>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 id="posters">Posters</h2>
+
+  <p>
+    <h3>PhD Poster for NFDIxCS Summer School on Open Science and Reproducible Research</h3> 
+    <br />
+    <img src="icons/authors.svg" class="icon">
+    <a href="https://julianklein-cv.github.io/cv/"class="text-link">Julian Klein</a>
+    <br />
+    <img src="icons/paper.svg" class="icon"> 
+    <a href="timeline/2025/poster.pdf"
+      class="text-link" download>
+      Poster
+    </a>
+  </p>
+
+</main>
 </body>
-
 </html>
